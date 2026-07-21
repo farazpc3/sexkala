@@ -8,17 +8,18 @@ RUN apk add --no-cache libc6-compat openssl
 # ---------- Dependencies ----------
 FROM base AS deps
 
-# Enable pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# ⭐ APPROVE BUILD SCRIPTS BEFORE COPYING package.json
-RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
-
-# Now copy package.json + lockfile
 COPY package.json pnpm-lock.yaml* ./
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# ⭐ Step 1 — Dummy install (scripts blocked)
+RUN pnpm install --ignore-scripts --frozen-lockfile
+
+# ⭐ Step 2 — Approve build scripts (now pnpm knows which packages exist)
+RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
+
+# ⭐ Step 3 — Real install (scripts allowed)
+RUN pnpm rebuild
 
 # ---------- Build ----------
 FROM base AS builder
