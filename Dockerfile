@@ -3,7 +3,11 @@ FROM node:24-slim AS base
 WORKDIR /app
 ENV NODE_ENV=production
 
-RUN apk add --no-cache libc6-compat openssl
+# Debian-based → use apt-get
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    openssl \
+    libc6 \
+    && rm -rf /var/lib/apt/lists/*
 
 # ---------- Dependencies ----------
 FROM base AS deps
@@ -12,13 +16,13 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY package.json pnpm-lock.yaml* ./
 
-# ⭐ Step 1 — Dummy install (scripts blocked)
+# Dummy install
 RUN pnpm install --ignore-scripts --frozen-lockfile
 
-# ⭐ Step 2 — Approve build scripts (now pnpm knows which packages exist)
+# Approve build scripts
 RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
 
-# ⭐ Step 3 — Real install (scripts allowed)
+# Real install
 RUN pnpm rebuild
 
 # ---------- Build ----------
@@ -36,7 +40,11 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
-RUN apk add --no-cache openssl
+# Debian-based → use apt-get
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    openssl \
+    libc6 \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
