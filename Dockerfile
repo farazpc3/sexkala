@@ -26,10 +26,7 @@ FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Prisma generate
 RUN pnpm prisma generate
-
-# Next.js build (standalone)
 RUN pnpm build
 
 # ---------- Runtime ----------
@@ -40,7 +37,6 @@ ENV PORT=3000
 
 RUN apk add --no-cache openssl
 
-# Copy standalone build
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
@@ -48,5 +44,4 @@ COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/app/generated ./app/generated
 
 EXPOSE 3000
-
 CMD ["node", "server.js"]
