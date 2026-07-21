@@ -12,6 +12,7 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY package.json pnpm-lock.yaml* ./
 
+RUN pnpm config set ignore-script false
 RUN pnpm install --ignore-scripts --frozen-lockfile
 RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
 RUN pnpm rebuild
