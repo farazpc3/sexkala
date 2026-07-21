@@ -1,0 +1,150 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  phone        String    @unique
+  passwordHash String
+  name         String?
+  role         UserRole  @default(USER)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  email        String    @unique
+  carts        Cart[]
+  orders       Order[]
+  receipts     Receipt[]
+  posts        Post[] 
+  // Opposite relations for SupportMessage
+  messages      SupportMessage[] @relation("UserMessages")
+  adminMessages SupportMessage[] @relation("AdminMessages")
+
+  preferences UserPreference?
+}
+
+model Post {
+  id        Int     @id @default(autoincrement())
+  title     String
+  content   String?
+  published Boolean @default(false)
+  authorId  Int
+  author    User    @relation(fields: [authorId], references: [id])
+}
+
+model UserPreference {
+  id       Int    @id @default(autoincrement())
+  userId   Int    @unique
+  language String @default("fa")
+  theme    Theme  @default(DARK)
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+enum Theme {
+  DARK
+  LIGHT
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+model Product {
+  id          Int        @id @default(autoincrement())
+  title       String
+  description String?
+  price       Decimal    @db.Decimal(10, 2)
+  images      Json
+  categoryId  Int
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  cartItems   CartItem[]
+  category    Category   @relation(fields: [categoryId], references: [id])
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String
+  products Product[]
+}
+
+model Cart {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user   User       @relation(fields: [userId], references: [id])
+  items  CartItem[]
+  orders Order[]
+}
+
+model CartItem {
+  id        Int @id @default(autoincrement())
+  cartId    Int
+  productId Int
+
+  cart    Cart    @relation(fields: [cartId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
+}
+
+model Order {
+  id        Int         @id @default(autoincrement())
+  userId    Int
+  cartId    Int
+  status    OrderStatus @default(PENDING)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  user    User     @relation(fields: [userId], references: [id])
+  cart    Cart     @relation(fields: [cartId], references: [id])
+  receipt Receipt?
+}
+
+enum OrderStatus {
+  PENDING
+  WAITING_FOR_VALIDATION
+  APPROVED
+  REJECTED
+}
+
+model Receipt {
+  id          Int           @id @default(autoincrement())
+  orderId     Int           @unique
+  userId      Int
+  imageUrl    String
+  createdAt   DateTime      @default(now())
+  validatedAt DateTime?
+  status      ReceiptStatus @default(PENDING)
+
+  order Order @relation(fields: [orderId], references: [id])
+  user  User  @relation(fields: [userId], references: [id])
+}
+
+enum ReceiptStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model SupportMessage {
+  id        Int      @id @default(autoincrement())
+  userId    Int?
+  adminId   Int?
+  content   String
+  createdAt DateTime @default(now())
+
+  // Both relations now have valid opposites
+  user  User? @relation("UserMessages", fields: [userId], references: [id])
+  admin User? @relation("AdminMessages", fields: [adminId], references: [id])
+}
