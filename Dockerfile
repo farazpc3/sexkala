@@ -31,22 +31,15 @@ FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# pnpm is available because builder inherits from base
 RUN pnpm prisma generate
 RUN pnpm build
 
 # ---------- Runtime ----------
-FROM node:24-slim AS runner
+FROM base AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Runtime dependencies (openssl only)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    openssl \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy standalone Next.js output
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
