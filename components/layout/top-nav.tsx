@@ -6,9 +6,16 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Menu, ShoppingCart, User, Moon, Sun, Search } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function TopNav() {
   const { theme, setTheme } = useTheme();
+
+  // Prevent hydration mismatch by waiting until theme is mounted
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  const isDark = mounted && theme === "dark";
 
   return (
     <header
@@ -109,12 +116,17 @@ export function TopNav() {
             variant="ghost"
             size="icon"
             className="text-white hover:text-[hsl(45,90%,65%)]"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(isDark ? "light" : "dark")}
           >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
+            {mounted ? (
+              isDark ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )
             ) : (
-              <Moon className="h-5 w-5" />
+              // Render nothing until mounted to avoid hydration mismatch
+              <div className="h-5 w-5" />
             )}
           </Button>
         </div>
