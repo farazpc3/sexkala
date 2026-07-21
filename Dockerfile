@@ -12,17 +12,15 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY package.json pnpm-lock.yaml* ./
 
-# ⭐ Step 1 — Dummy install (scripts blocked)
 RUN pnpm install --ignore-scripts --frozen-lockfile
-
-# ⭐ Step 2 — Approve build scripts (now pnpm knows which packages exist)
 RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
-
-# ⭐ Step 3 — Real install (scripts allowed)
 RUN pnpm rebuild
 
 # ---------- Build ----------
 FROM base AS builder
+
+# ⭐ enable pnpm again (new stage)
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
