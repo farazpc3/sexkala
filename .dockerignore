@@ -1,12 +1,10 @@
 node_modules
 .next
-sexkala/node_modules
-sexkala/.next
+pnpm-store
+.pnpm
 .git
 .gitignore
 Dockerfile
 docker-compose.yml
 .env
 .env.*
-.pnpm
-pnpm-store

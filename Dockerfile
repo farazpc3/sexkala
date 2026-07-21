@@ -10,7 +10,7 @@ FROM base AS deps
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# Copy only dependency files first (best practice)
+# Copy only dependency files first
 COPY package.json pnpm-lock.yaml ./
 
 # Approve native builds BEFORE install
