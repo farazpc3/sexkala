@@ -10,12 +10,13 @@ FROM base AS deps
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-COPY package.json pnpm-lock.yaml* ./
+# Copy only dependency files first (best practice)
+COPY package.json pnpm-lock.yaml ./
 
-# Allow native builds
+# Approve native builds BEFORE install
 RUN pnpm approve-builds
 
-# Install dependencies
+# Install dependencies with scripts enabled
 RUN pnpm install --frozen-lockfile
 
 # ---------- Build ----------
