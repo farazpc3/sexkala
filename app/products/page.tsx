@@ -1,6 +1,8 @@
 import { prisma } from "@/lib/prisma";
 import ProductGrid from "../_components/product-grid";
 
+export const dynamic = "force-dynamic";
+
 interface SearchParams {
   q?: string;
   categoryId?: string;
