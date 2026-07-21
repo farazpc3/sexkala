@@ -12,15 +12,15 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY package.json pnpm-lock.yaml* ./
 
-RUN pnpm config set ignore-script false
-RUN pnpm install --ignore-scripts --frozen-lockfile
-RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
-RUN pnpm rebuild
+# Allow native builds
+RUN pnpm approve-builds
+
+# Install dependencies
+RUN pnpm install --frozen-lockfile
 
 # ---------- Build ----------
 FROM base AS builder
 
-# ⭐ enable pnpm again (new stage)
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY --from=deps /app/node_modules ./node_modules
