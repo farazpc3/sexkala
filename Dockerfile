@@ -6,23 +6,23 @@ ENV NODE_ENV=production
 # Debian-based → use apt-get
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openssl \
-    libc6 \
     && rm -rf /var/lib/apt/lists/*
+
+# Enable pnpm globally for all stages inheriting from base
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
 # ---------- Dependencies ----------
 FROM base AS deps
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
-
 COPY package.json pnpm-lock.yaml* ./
 
-# Dummy install
+# Dummy install (scripts blocked)
 RUN pnpm install --ignore-scripts --frozen-lockfile
 
 # Approve build scripts
 RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
 
-# Real install
+# Real install (scripts allowed)
 RUN pnpm rebuild
 
 # ---------- Build ----------
@@ -31,6 +31,7 @@ FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# pnpm is available because builder inherits from base
 RUN pnpm prisma generate
 RUN pnpm build
 
@@ -40,12 +41,12 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Debian-based → use apt-get
+# Runtime dependencies (openssl only)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openssl \
-    libc6 \
     && rm -rf /var/lib/apt/lists/*
 
+# Copy standalone Next.js output
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
