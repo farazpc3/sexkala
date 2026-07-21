@@ -5,29 +5,17 @@ ENV NODE_ENV=production
 # ---------- Dependencies ----------
 FROM base AS deps
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
-
+COPY node_modules ./node_modules
 COPY package.json pnpm-lock.yaml ./
-
-# Allow scripts
-RUN pnpm config set enable-pre-post-scripts true
-
-# Install dependencies (scripts enabled)
-RUN pnpm install --frozen-lockfile --ignore-scripts=false
-
-# Approve native builds AFTER install
-RUN pnpm approve-builds
 
 # ---------- Build ----------
 FROM base AS builder
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
-
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-RUN pnpm prisma generate
-RUN pnpm build
+RUN npx prisma generate
+RUN npm run build
 
 # ---------- Runtime ----------
 FROM node:22-slim AS runner
