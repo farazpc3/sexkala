@@ -8,6 +8,7 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat openssl
 COPY package.json pnpm-lock.yaml* ./
 RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
 RUN pnpm install --frozen-lockfile
 
 # ---------- Build ----------
