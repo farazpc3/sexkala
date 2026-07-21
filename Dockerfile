@@ -1,9 +1,7 @@
 # ---------- Base image ----------
-FROM node:24-alpine AS base
+FROM node:22-slim AS base
 WORKDIR /app
 ENV NODE_ENV=production
-
-RUN apk add --no-cache libc6-compat openssl
 
 # ---------- Dependencies ----------
 FROM base AS deps
@@ -16,7 +14,7 @@ COPY package.json pnpm-lock.yaml ./
 # Approve native builds BEFORE install
 RUN pnpm approve-builds
 
-# Install dependencies with scripts enabled
+# Install dependencies
 RUN pnpm install --frozen-lockfile
 
 # ---------- Build ----------
@@ -31,12 +29,10 @@ RUN pnpm prisma generate
 RUN pnpm build
 
 # ---------- Runtime ----------
-FROM node:24-alpine AS runner
+FROM node:22-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
-
-RUN apk add --no-cache openssl
 
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
