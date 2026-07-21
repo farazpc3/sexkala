@@ -1,5 +1,5 @@
 # ---------- Base image ----------
-FROM node:24-alpine AS base
+FROM node:24-slim AS base
 WORKDIR /app
 ENV NODE_ENV=production
 
@@ -31,7 +31,7 @@ RUN pnpm prisma generate
 RUN pnpm build
 
 # ---------- Runtime ----------
-FROM node:24-alpine AS runner
+FROM node:24-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
