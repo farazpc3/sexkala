@@ -3,23 +3,33 @@ FROM node:24-alpine AS base
 WORKDIR /app
 ENV NODE_ENV=production
 
+RUN apk add --no-cache libc6-compat openssl
+
 # ---------- Dependencies ----------
 FROM base AS deps
-RUN apk add --no-cache libc6-compat openssl
-COPY package.json pnpm-lock.yaml* ./
+
+# Enable pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# ⭐ APPROVE BUILD SCRIPTS BEFORE COPYING package.json
 RUN pnpm approve-builds prisma @prisma/engines esbuild sharp bcrypt
+
+# Now copy package.json + lockfile
+COPY package.json pnpm-lock.yaml* ./
+
+# Install dependencies
 RUN pnpm install --frozen-lockfile
 
 # ---------- Build ----------
 FROM base AS builder
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Prisma generate (uses prisma.config.ts and prisma/schema.prisma)
+# Prisma generate
 RUN pnpm prisma generate
 
-# Next.js build (app router, standalone output)
+# Next.js build (standalone)
 RUN pnpm build
 
 # ---------- Runtime ----------
@@ -35,8 +45,6 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/prisma ./prisma
-
-# If Prisma client is generated to app/generated/prisma (as in your logs)
 COPY --from=builder /app/app/generated ./app/generated
 
 EXPOSE 3000
