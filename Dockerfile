@@ -10,9 +10,8 @@ FROM base AS deps
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# COPY CORRECT PATHS (your repo is nested!)
-COPY sexkala/package.json ./package.json
-COPY sexkala/pnpm-lock.yaml ./pnpm-lock.yaml
+# Copy dependency files
+COPY package.json pnpm-lock.yaml ./
 
 # Approve native builds BEFORE install
 RUN pnpm approve-builds
@@ -26,7 +25,7 @@ FROM base AS builder
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY --from=deps /app/node_modules ./node_modules
-COPY sexkala/ .
+COPY . .
 
 RUN pnpm prisma generate
 RUN pnpm build
