@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 const categories = [
   { id: 1, title: "دسته ۱" },
@@ -12,7 +13,6 @@ const categories = [
 export default function Categories() {
   return (
     <section id="categories" className="relative mb-16">
-      {/* Mesh gradient background */}
       <div className="absolute inset-0 -z-10 opacity-60 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,#ff8fb8_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#b83280_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#fbbf24_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_10%_20%,#4b1035_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#8b1c4a_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#1a0b1f_0%,transparent_70%)]" />
       </div>
@@ -43,6 +43,11 @@ export default function Categories() {
           </Card>
         ))}
       </div>
+
+      <p className="text-center text-white/70 text-sm mt-6">
+        برای خرید، کد محصول را در تلگرام ارسال کنید:{" "}
+        <span className="font-bold">@Ads_shopes</span>
+      </p>
     </section>
   );
 }
