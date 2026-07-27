@@ -1,0 +1,44 @@
+<!-- public/bg-light-sexkala.svg -->
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgLightGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff5f9"/>
+      <stop offset="35%" stop-color="#ffe0ec"/>
+      <stop offset="75%" stop-color="#f7c4dd"/>
+      <stop offset="100%" stop-color="#f0b0d0"/>
+    </linearGradient>
+
+    <radialGradient id="bgLightGlow" cx="20%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#ff8fb8" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#f7c4dd" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fff5f9" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bgLightGlow2" cx="80%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#ffd6e8" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#f0b0d0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fff5f9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1440" height="900" fill="url(#bgLightGradient)" />
+
+  <!-- Soft romantic glows -->
+  <circle cx="260" cy="140" r="380" fill="url(#bgLightGlow)" />
+  <circle cx="1120" cy="720" r="420" fill="url(#bgLightGlow2)" />
+
+  <!-- Curvy waves suggesting softness/intimacy -->
+  <path
+    d="M0 580 C 200 540 340 500 520 510 C 700 520 840 570 1020 570 C 1200 570 1320 540 1440 520 L 1440 900 L 0 900 Z"
+    fill="rgba(255, 143, 184, 0.25)"
+  />
+  <path
+    d="M0 540 C 180 500 320 460 500 460 C 700 460 860 500 1040 500 C 1220 500 1340 470 1440 450 L 1440 900 L 0 900 Z"
+    fill="rgba(247, 196, 221, 0.35)"
+  />
+  <path
+    d="M0 500 C 160 460 320 430 480 430 C 680 430 840 450 1020 460 C 1200 470 1320 460 1440 450 L 1440 900 L 0 900 Z"
+    fill="rgba(240, 176, 208, 0.4)"
+  />
+</svg>

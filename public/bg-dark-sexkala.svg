@@ -1,0 +1,47 @@
+<!-- public/bg-dark-sexkala.svg -->
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgDarkGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050509"/>
+      <stop offset="40%" stop-color="#1a0b1f"/>
+      <stop offset="75%" stop-color="#4b1035"/>
+      <stop offset="100%" stop-color="#8b1c4a"/>
+    </linearGradient>
+
+    <radialGradient id="bgDarkGlow" cx="70%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#ff4b8b" stop-opacity="0.55"/>
+      <stop offset="40%" stop-color="#c02060" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#050509" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bgDarkGlow2" cx="20%" cy="80%" r="55%">
+      <stop offset="0%" stop-color="#ffb3c6" stop-opacity="0.45"/>
+      <stop offset="40%" stop-color="#8b1c4a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#050509" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1440" height="900" fill="url(#bgDarkGradient)" />
+
+  <!-- Soft glows -->
+  <circle cx="1100" cy="120" r="420" fill="url(#bgDarkGlow)" />
+  <circle cx="260" cy="720" r="380" fill="url(#bgDarkGlow2)" />
+
+  <!-- Curvy sensual waves -->
+  <path
+    d="M0 620 C 220 580 320 520 480 540 C 640 560 760 640 920 640 C 1120 640 1240 580 1440 520 L 1440 900 L 0 900 Z"
+    fill="rgba(255, 75, 139, 0.18)"
+  />
+  <path
+    d="M0 560 C 200 520 340 460 520 470 C 700 480 820 540 980 540 C 1160 540 1300 500 1440 460 L 1440 900 L 0 900 Z"
+    fill="rgba(255, 179, 198, 0.12)"
+  />
+  <path
+    d="M0 520 C 180 480 320 430 500 430 C 720 430 860 480 1040 480 C 1220 480 1340 450 1440 430 L 1440 900 L 0 900 Z"
+    fill="rgba(139, 28, 74, 0.35)"
+  />
+
+  <!-- Subtle grain-like overlay -->
+  <rect width="1440" height="900" fill="rgba(0,0,0,0.25)" style="mix-blend-mode:multiply;" />
+</svg>
