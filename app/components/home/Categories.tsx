@@ -1,39 +1,45 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+"use client";
 
-const items = [
-  "ویبراتور و اسباب‌بازی‌های جنسی",
-  "ژل و اسپری تاخیری",
-  "کاندوم و محصولات بهداشتی",
-  "لباس زیر فانتزی",
-  "ست‌های زوجی",
-  "محصولات افزایش لذت",
+import { Card } from "@/components/ui/card";
+
+const categories = [
+  { id: 1, title: "دسته ۱" },
+  { id: 2, title: "دسته ۲" },
+  { id: 3, title: "دسته ۳" },
+  { id: 4, title: "دسته ۴" },
 ];
 
 export default function Categories() {
   return (
-    <section className="mb-10">
-      <h3 className="text-lg font-semibold mb-4">دسته‌بندی محصولات</h3>
+    <section id="categories" className="relative mb-16">
+      {/* Mesh gradient background */}
+      <div className="absolute inset-0 -z-10 opacity-60 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,#ff8fb8_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#b83280_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#fbbf24_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_10%_20%,#4b1035_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#8b1c4a_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#1a0b1f_0%,transparent_70%)]" />
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {items.map((title, idx) => (
-          <Card key={idx}>
-            <CardContent className="p-4 flex flex-col gap-3">
-              <div className="w-full h-32 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-xs">
-                جای‌نگهدار عکس محصول
-              </div>
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 drop-shadow-lg text-center">
+        دسته‌بندی‌ها
+      </h2>
 
-              <div className="w-full h-10 rounded-md border border-dotted border-purple-300 dark:border-purple-700 flex items-center justify-center text-[11px]">
-                جای‌نگهدار پس‌زمینه و تم
-              </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {categories.map((cat) => (
+          <Card
+            key={cat.id}
+            className="
+              glass rounded-2xl p-6 text-center shadow-xl
+              border border-white/20 dark:border-white/10
+              backdrop-blur-xl transition-all
+              hover:scale-[1.05] hover:shadow-[0_0_35px_rgba(236,72,153,0.5)]
+              float-animation
+            "
+          >
+            <div className="h-24 rounded-xl bg-white/10 dark:bg-black/20 border border-white/20 dark:border-white/10 backdrop-blur-md flex items-center justify-center text-sm text-white/80 mb-4">
+              تصویر دسته {cat.id}
+            </div>
 
-              <h4 className="text-sm font-semibold">{title}</h4>
-              <p className="text-xs text-muted-foreground">
-                توضیحات کوتاه درباره این دسته.
-              </p>
-
-              <Button className="mt-auto text-xs">مشاهده محصولات</Button>
-            </CardContent>
+            <h3 className="text-lg font-semibold text-white drop-shadow-md">
+              {cat.title}
+            </h3>
           </Card>
         ))}
       </div>
