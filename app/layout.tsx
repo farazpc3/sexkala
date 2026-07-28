@@ -30,8 +30,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
         <Header isDark={isDark} setIsDark={setIsDark} />
 
-        <main className="max-w-5xl mx-auto px-4 py-10">
-          <div className="glass rounded-3xl p-6 md:p-10 shadow-2xl space-y-10">
+        <main className="max-w-7xl mx-auto px-6 py-12">
+          <div className="glass rounded-3xl p-6 md:p-10 space-y-10">
             {children}
           </div>
         </main>

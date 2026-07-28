@@ -13,24 +13,42 @@ export default function Footer() {
         shadow-[0_0_25px_rgba(236,72,153,0.25)]
       "
     >
+      {/* Background mesh */}
       <div className="absolute inset-0 -z-10 opacity-50 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,#ff8fb8_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#b83280_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#fbbf24_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_10%_20%,#4b1035_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#8b1c4a_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#1a0b1f_0%,transparent_70%)]" />
+        <div
+          className="
+            absolute inset-0
+            bg-[radial-gradient(circle_at_10%_20%,#ff8fb8_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#b83280_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#fbbf24_0%,transparent_70%)]
+            dark:bg-[radial-gradient(circle_at_10%_20%,#4b1035_0%,transparent_60%),radial-gradient(circle_at_90%_80%,#8b1c4a_0%,transparent_60%),radial-gradient(circle_at_50%_50%,#1a0b1f_0%,transparent_70%)]
+          "
+        />
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 text-center space-y-3">
-        <h3 className="text-lg font-bold text-white drop-shadow-lg">
+      {/* Content */}
+      <div className="max-w-5xl mx-auto px-4 text-center space-y-4">
+        {/* Title */}
+        <h3
+          className="text-lg font-bold text-primary dark:text-inverse
+ drop-shadow-lg"
+        >
           سکسکالا – sexkala.com
         </h3>
 
-        <p className="text-sm text-white/80 leading-relaxed">
+        {/* Description */}
+        <p className="text-sm text-secondary leading-relaxed">
           ثبت سفارش فقط از طریق تلگرام انجام می‌شود.
         </p>
 
-        <div className="flex justify-center gap-4 pt-2">
+        {/* Links */}
+        <div className="flex flex-wrap justify-center gap-4 pt-2">
+          {/* Telegram link */}
           <Link
             href="https://t.me/sexyy_toys"
             target="_blank"
-            className="flex items-center gap-2 text-white/80 hover:text-white transition"
+            className="
+              flex items-center gap-2 text-secondary hover:text-inverse
+              transition-colors duration-200
+            "
           >
             <Image
               src="/icons/telegram.svg"
@@ -41,14 +59,16 @@ export default function Footer() {
             کانال تلگرام
           </Link>
 
-          <span className="text-white/60">|</span>
+          <span className="text-muted">|</span>
 
-          <span className="text-white/80">
+          {/* Support */}
+          <span className="text-secondary">
             پشتیبانی: <span className="font-bold">@Ads_shopes</span>
           </span>
         </div>
 
-        <p className="text-xs text-white/60 mt-4">
+        {/* Copyright */}
+        <p className="text-xs text-muted mt-4">
           © {new Date().getFullYear()} تمامی حقوق محفوظ است.
         </p>
       </div>

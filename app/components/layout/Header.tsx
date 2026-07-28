@@ -20,9 +20,20 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
       "
     >
       <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo + Title */}
         <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+          {/* Logo container */}
+          <div
+            className="
+              w-14 h-14 rounded-2xl
+              bg-white/10 dark:bg-black/20
+              backdrop-blur-md
+              border border-white/20 dark:border-white/10
+              flex items-center justify-center
+              shadow-[0_0_20px_rgba(255,255,255,0.2)]
+              transition-all
+            "
+          >
             <Image
               src={isDark ? "/logo-dark.svg" : "/logo-light.svg"}
               alt="Logo"
@@ -32,11 +43,12 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
             />
           </div>
 
+          {/* Title + domain */}
           <div className="space-y-1">
-            <h1 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
-              سکسکالا
+            <h1 className="text-xl md:text-2xl font-bold text-primary dark:text-inverse drop-shadow-lg">
+              سکس کالا
             </h1>
-            <p className="text-sm text-white/70">sexkala.com</p>
+            <p className="text-sm text-secondary">sexkala.com</p>
           </div>
         </div>
 
@@ -48,7 +60,8 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
             target="_blank"
             className="
               flex items-center gap-2 px-4 py-2 rounded-full text-sm
-              bg-gradient-to-r from-blue-500 to-purple-600 text-white
+              bg-gradient-to-r from-blue-500 to-purple-600
+              text-inverse font-semibold
               shadow-[0_0_20px_rgba(59,130,246,0.5)]
               hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]
               transition-all
@@ -63,6 +76,7 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
             تلگرام فروشگاه
           </Link>
 
+          {/* Theme toggle */}
           <ThemeToggle isDark={isDark} setIsDark={setIsDark} />
         </div>
       </div>

@@ -1,4 +1,28 @@
-<svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="120" cy="120" r="120" fill="#37AEE2"/>
-  <path d="M180 70L160 170c-2 10-8 12-16 7l-44-32-21 20c-2 2-4 3-7 3l3-45 82-62c4-3 9 1 7 6l-66 60 51 40c5 4 11 2 12-5l20-94c1-6-5-10-11-7l-120 47c-7 3-7 12-1 15l30 10 14 5 3 1 1-1 5-4 1-1 1-1 2-2 1-1 1-1 1-1 1-1 1-1 1-1 1-1 1-1" fill="#fff"/>
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue circle background -->
+  <circle cx="120" cy="120" r="120" fill="#37AEE2" />
+
+  <!-- Paper plane -->
+  <path
+    d="M60 120
+       L180 70
+       C185 68 190 72 188 78
+       L160 180
+       C158 186 150 188 145 184
+       L115 160
+       L95 175
+       C92 177 88 176 87 172
+       L90 140
+       Z"
+    fill="#ffffff"
+  />
+
+  <!-- Inner highlight on plane -->
+  <path
+    d="M95 140
+       L165 85
+       L115 155
+       Z"
+    fill="#E3F2FD"
+  />
 </svg>

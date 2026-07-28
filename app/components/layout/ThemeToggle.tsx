@@ -12,7 +12,15 @@ export default function ThemeToggle({ isDark, setIsDark }: ThemeToggleProps) {
     <Button
       variant="outline"
       onClick={() => setIsDark(!isDark)}
-      className="text-sm"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      className="
+        text-secondary text-sm
+        px-4 py-2 rounded-full
+        transition-all duration-300
+        hover:text-inverse
+        hover:shadow-[0_0_15px_rgba(236,72,153,0.4)]
+        active:scale-95
+      "
     >
       {isDark ? "حالت روشن" : "حالت تیره"}
     </Button>
