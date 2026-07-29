@@ -1,0 +1,90 @@
+{
+  "id": "0012",
+  "code": "Code#12",
+  "slug": "5-step-silicone-butt-plug",
+
+  "name": {
+    "fa": "بات ۵ پله سیلیکونی",
+    "en": "5-Step Silicone Butt Plug"
+  },
+
+  "description": {
+    "short": "بات پلاگ سیلیکونی ۵ پله با طراحی منعطف",
+    "full": "بات پلاگ ۵ پله سیلیکونی با جنس سیلیکون طبی، منعطف، ضد حساسیت و قابل شستشو. طراحی پله‌پله برای تحریک تدریجی و افزایش لذت. کاملاً بهداشتی و ایمن برای استفاده در ناحیه مقعد. کیفیت بالا و بافت نرم برای راحتی بیشتر."
+  },
+
+  "categoryId": "butt-plugs",
+  "subcategoryId": "silicone",
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["purple", "pink"],
+
+  "tagIds": [
+    "5-step",
+    "silicone",
+    "flexible",
+    "hypoallergenic",
+    "anal",
+    "beginner",
+    "graduated"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "soft-touch",
+    "graduated-design"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "steps": 5,
+    "material": "medical-grade-silicone",
+    "flexibility": "high"
+  },
+
+  "images": [
+    {
+      "src": "/products/0012/cover.webp",
+      "alt": "بات ۵ پله سیلیکونی",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["recommended", "best-seller"],
+
+  "keywords": [
+    "بات پلاگ",
+    "بات ۵ پله",
+    "سیلیکونی",
+    "آنال",
+    "پله پله",
+    "تحریک تدریجی"
+  ],
+
+  "relatedProducts": ["0001", "0002", "0006", "0017"],
+
+  "seo": {
+    "title": "بات پلاگ سیلیکونی ۵ پله منعطف | SexKala",
+    "description": "بات پلاگ ۵ پله سیلیکونی با جنس سیلیکون طبی، منعطف، ضد حساسیت، قابل شستشو، طراحی پله‌پله برای تحریک تدریجی."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 12,
+    "hidePrice": false
+  }
+}

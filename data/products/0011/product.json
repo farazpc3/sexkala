@@ -1,0 +1,101 @@
+{
+  "id": "0011",
+  "code": "Code#11",
+  "slug": "pencil-vibrator",
+
+  "name": {
+    "fa": "ویبره مدادی",
+    "en": "Pencil Vibrator"
+  },
+
+  "description": {
+    "short": "ویبراتور مدادی شکل با ۱۰ مدل ویبره",
+    "full": "ویبراتور مدادی شکل با ۱۰ مدل ویبره، ضدآب و قابل شستشو، باتری خور، جنس ABS با کیفیت بالا. طراحی جمع و جور و ظریف با طول ۹۲ میلی‌متر و قطر ۱۸ میلی‌متر. قابل حمل و مناسب برای استفاده داخل و خارج بدن. فقط در رنگ مشکی موجود."
+  },
+
+  "categoryId": "vibrators",
+  "subcategoryId": "mini",
+
+  "materialIds": ["abs"],
+
+  "brandId": null,
+
+  "colorIds": ["black"],
+
+  "tagIds": [
+    "pencil",
+    "mini",
+    "waterproof",
+    "battery-operated",
+    "compact",
+    "discreet",
+    "travel-friendly"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "waterproof",
+    "compact",
+    "powerful",
+    "discreet"
+  ],
+
+  "specifications": {
+    "size": "XS",
+    "lengthMm": 92,
+    "diameterMm": 18,
+    "vibrationModes": 10,
+    "batteryType": "AAA",
+    "material": "ABS-plastic",
+    "color": "black"
+  },
+
+  "images": [
+    {
+      "src": "/products/0011/cover.webp",
+      "alt": "ویبره مدادی",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0011/demo.mp4",
+      "alt": "ویبره مدادی - ویدئو نمایشی",
+      "duration": 32,
+      "thumbnail": "/products/0011/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["budget", "compact"],
+
+  "keywords": [
+    "ویبراتور",
+    "ویبره مدادی",
+    "ویبره کوچک",
+    "ارتعاشگر",
+    "باتری خور",
+    "ضدآب",
+    "قابل حمل"
+  ],
+
+  "relatedProducts": ["0005", "0008", "0025"],
+
+  "seo": {
+    "title": "ویبراتور مدادی شکل کوچک با ۱۰ مدل ویبره | SexKala",
+    "description": "ویبراتور مدادی شکل با ۱۰ مدل ویبره، ضدآب، باتری خور، جنس ABS، طول ۹۲ میلی‌متر، قابل حمل و مناسب برای سفر."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 11,
+    "hidePrice": false
+  }
+}

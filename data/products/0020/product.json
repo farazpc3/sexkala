@@ -1,0 +1,85 @@
+{
+  "id": "0020",
+  "code": "Code#20",
+  "slug": "double-dildo-harness",
+
+  "name": {
+    "fa": "دیلدو دوتایی",
+    "en": "Double Dildo with Harness"
+  },
+
+  "description": {
+    "short": "دیلدو دوتایی با سیلیکون طبی و کمربند قابل تنظیم",
+    "full": "دیلدو دوتایی با جنس سیلیکون طبی، قابلیت باز شدن هر ۲ دیلدو و تغییر جهت دیلدوها. دارای کمربند قابل تنظیم با طول دیلدو بزرگ ۱۶۵ میلی‌متر و طول دیلدو کوچک ۱۰۵ میلی‌متر با قطر هر دو ۳۵ میلی‌متر. طراحی منعطف و ارگونومیک برای استفاده همزمان دو نفر."
+  },
+
+  "categoryId": "dildos",
+  "subcategoryId": "double",
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone", "black"],
+
+  "tagIds": ["double", "harness", "silicone", "adjustable", "dual", "couples"],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "adjustable",
+    "harness-compatible"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "largeLengthMm": 165,
+    "smallLengthMm": 105,
+    "diameterMm": 35,
+    "material": "medical-grade-silicone",
+    "adjustable": true,
+    "harness": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0020/cover.webp",
+      "alt": "دیلدو دوتایی",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["couples", "recommended"],
+
+  "keywords": [
+    "دیلدو",
+    "دیلدو دوتایی",
+    "دیلدو دو نفره",
+    "سیلیکون",
+    "کمربند",
+    "قابل تنظیم"
+  ],
+
+  "relatedProducts": ["0009", "0014", "0016", "0018"],
+
+  "seo": {
+    "title": "دیلدو دوتایی با کمربند قابل تنظیم | SexKala",
+    "description": "دیلدو دوتایی با سیلیکون طبی، قابلیت باز شدن و تغییر جهت، کمربند قابل تنظیم، طول ۱۶۵ و ۱۰۵ میلی‌متر."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 20,
+    "hidePrice": false
+  }
+}

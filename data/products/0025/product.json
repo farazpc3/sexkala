@@ -1,0 +1,96 @@
+{
+  "id": "0025",
+  "code": "Code#25",
+  "slug": "electric-magic-microphone-vibrator",
+
+  "name": {
+    "fa": "ویبراتور میکروفنی برقی مجیک",
+    "en": "Electric Magic Microphone Vibrator"
+  },
+
+  "description": {
+    "short": "ویبراتور میکروفنی برقی با ۱۰ مدل ویبره",
+    "full": "ویبراتور میکروفنی برقی (برق مستقیم) با سایز بزرگ و ۱۰ مدل ویبره. جنس سری سیلیکون طبی با ضد حساسیت، سری منعطف و فوق‌العاده قدرتمند. طراحی میکروفنی با قدرت بالا برای تحریک عمیق و مؤثر."
+  },
+
+  "categoryId": "vibrators",
+  "subcategoryId": "electric",
+
+  "materialIds": ["silicone", "abs"],
+
+  "brandId": null,
+
+  "colorIds": ["black", "purple"],
+
+  "tagIds": [
+    "electric",
+    "microphone",
+    "powerful",
+    "silicone",
+    "hypoallergenic",
+    "flexible"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "powerful",
+    "electric"
+  ],
+
+  "specifications": {
+    "size": "L",
+    "vibrationModes": 10,
+    "powerSource": "electric",
+    "material": "medical-grade-silicone"
+  },
+
+  "images": [
+    {
+      "src": "/products/0025/cover.webp",
+      "alt": "ویبراتور میکروفنی برقی مجیک",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0025/demo.mp4",
+      "alt": "ویبراتور میکروفنی برقی - ویدئو نمایشی",
+      "duration": 24,
+      "thumbnail": "/products/0025/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["powerful", "electric", "premium"],
+
+  "keywords": [
+    "ویبراتور",
+    "میکروفنی",
+    "برقی",
+    "ویبره قدرتمند",
+    "سیلیکون",
+    "مجیک"
+  ],
+
+  "relatedProducts": ["0005", "0008", "0029", "0030"],
+
+  "seo": {
+    "title": "ویبراتور میکروفنی برقی قدرتمند با ۱۰ مدل ویبره | SexKala",
+    "description": "ویبراتور میکروفنی برقی با سایز بزرگ، ۱۰ مدل ویبره، سری سیلیکون طبی، ضد حساسیت، فوق‌العاده قدرتمند."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 25,
+    "hidePrice": false
+  }
+}

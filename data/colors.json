@@ -1,0 +1,130 @@
+[
+  {
+    "id": "black",
+    "name": {
+      "fa": "مشکی",
+      "en": "Black"
+    },
+    "hex": "#000000"
+  },
+  {
+    "id": "white",
+    "name": {
+      "fa": "سفید",
+      "en": "White"
+    },
+    "hex": "#FFFFFF"
+  },
+  {
+    "id": "gray",
+    "name": {
+      "fa": "خاکستری",
+      "en": "Gray"
+    },
+    "hex": "#808080"
+  },
+  {
+    "id": "pink",
+    "name": {
+      "fa": "صورتی",
+      "en": "Pink"
+    },
+    "hex": "#FFC0CB"
+  },
+  {
+    "id": "purple",
+    "name": {
+      "fa": "بنفش",
+      "en": "Purple"
+    },
+    "hex": "#800080"
+  },
+  {
+    "id": "red",
+    "name": {
+      "fa": "قرمز",
+      "en": "Red"
+    },
+    "hex": "#FF0000"
+  },
+  {
+    "id": "blue",
+    "name": {
+      "fa": "آبی",
+      "en": "Blue"
+    },
+    "hex": "#0000FF"
+  },
+  {
+    "id": "green",
+    "name": {
+      "fa": "سبز",
+      "en": "Green"
+    },
+    "hex": "#008000"
+  },
+  {
+    "id": "yellow",
+    "name": {
+      "fa": "زرد",
+      "en": "Yellow"
+    },
+    "hex": "#FFFF00"
+  },
+  {
+    "id": "orange",
+    "name": {
+      "fa": "نارنجی",
+      "en": "Orange"
+    },
+    "hex": "#FFA500"
+  },
+  {
+    "id": "brown",
+    "name": {
+      "fa": "قهوه‌ای",
+      "en": "Brown"
+    },
+    "hex": "#8B4513"
+  },
+  {
+    "id": "beige",
+    "name": {
+      "fa": "بژ",
+      "en": "Beige"
+    },
+    "hex": "#F5F5DC"
+  },
+  {
+    "id": "skin",
+    "name": {
+      "fa": "رنگ پوست",
+      "en": "Skin"
+    },
+    "hex": "#E8BEAC"
+  },
+  {
+    "id": "transparent",
+    "name": {
+      "fa": "شفاف",
+      "en": "Transparent"
+    },
+    "hex": null
+  },
+  {
+    "id": "multicolor",
+    "name": {
+      "fa": "چند رنگ",
+      "en": "Multicolor"
+    },
+    "hex": null
+  },
+  {
+    "id": "random",
+    "name": {
+      "fa": "رنگ رندوم",
+      "en": "Random"
+    },
+    "hex": null
+  }
+]

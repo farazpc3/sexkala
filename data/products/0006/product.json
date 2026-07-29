@@ -1,0 +1,84 @@
+{
+  "id": "0006",
+  "code": "Code#6",
+  "slug": "pear-shaped-steel-butt-plug",
+
+  "name": {
+    "fa": "بات گلابی",
+    "en": "Pear-Shaped Steel Butt Plug"
+  },
+
+  "description": {
+    "short": "بات پلاگ گلابی شکل استیل آبکاری شده با نگین",
+    "full": "بات پلاگ گلابی شکل در سایز مدیوم، جنس استیل آبکاری شده با نگین تزئینی، ضد حساسیت، قابل شستشو، کاملاً وارداتی با کیفیت بالا. طراحی ارگونومیک و ایمن برای استفاده در ناحیه مقعد."
+  },
+
+  "categoryId": "butt-plugs",
+  "subcategoryId": "steel",
+
+  "materialIds": ["steel"],
+
+  "brandId": null,
+
+  "colorIds": ["random"],
+
+  "tagIds": [
+    "pear-shaped",
+    "gemstone",
+    "steel",
+    "medium",
+    "anal",
+    "imported",
+    "hypoallergenic"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "durable",
+    "smooth-finish"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "lengthCm": 9.5,
+    "diameterCm": 3.4,
+    "material": "stainless-steel",
+    "plating": "chrome-plated",
+    "gemstone": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0006/cover.webp",
+      "alt": "بات گلابی استیل",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["recommended", "best-seller"],
+
+  "keywords": ["بات پلاگ", "بات گلابی", "استیل", "نگین دار", "آنال"],
+
+  "relatedProducts": ["0002", "0010", "0013", "0017"],
+
+  "seo": {
+    "title": "بات پلاگ استیل گلابی شکل با نگین | SexKala",
+    "description": "بات پلاگ گلابی شکل استیل آبکاری شده با نگین، سایز مدیوم، ضد حساسیت، قابل شستشو، کاملاً وارداتی."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 6,
+    "hidePrice": false
+  }
+}

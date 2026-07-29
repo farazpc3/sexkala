@@ -1,0 +1,85 @@
+{
+  "id": "0013",
+  "code": "Code#13",
+  "slug": "small-round-steel-butt-plug",
+
+  "name": {
+    "fa": "بات ته گرد اسمال",
+    "en": "Small Round Steel Butt Plug"
+  },
+
+  "description": {
+    "short": "بات پلاگ کوچک ته گرد استیل آبکاری شده",
+    "full": "بات پلاگ ته گرد در سایز اسمال با جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو، کاملاً وارداتی. طراحی گرد و ایمن با قطر ۲.۷ سانتی‌متر و طول ۷ سانتی‌متر. مناسب برای مبتدیان و افرادی که به دنبال سایز کوچک هستند. دارای نگین تزئینی با رنگ رندوم."
+  },
+
+  "categoryId": "butt-plugs",
+  "subcategoryId": "steel",
+
+  "materialIds": ["steel"],
+
+  "brandId": null,
+
+  "colorIds": ["random"],
+
+  "tagIds": [
+    "small",
+    "round",
+    "steel",
+    "gemstone",
+    "beginner",
+    "imported",
+    "hypoallergenic"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "durable",
+    "smooth-finish",
+    "beginner-friendly"
+  ],
+
+  "specifications": {
+    "size": "S",
+    "lengthCm": 7,
+    "diameterCm": 2.7,
+    "material": "stainless-steel",
+    "plating": "chrome-plated",
+    "gemstone": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0013/cover.webp",
+      "alt": "بات ته گرد اسمال",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["beginner"],
+
+  "keywords": ["بات پلاگ", "بات ته گرد", "استیل", "بات کوچک", "آنال", "مبتدی"],
+
+  "relatedProducts": ["0002", "0006", "0017"],
+
+  "seo": {
+    "title": "بات پلاگ استیل کوچک ته گرد | SexKala",
+    "description": "بات پلاگ ته گرد سایز اسمال با جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو، قطر ۲.۷ سانتی‌متر، مناسب برای مبتدیان."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 13,
+    "hidePrice": false
+  }
+}

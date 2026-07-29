@@ -1,0 +1,101 @@
+{
+  "id": "0024",
+  "code": "Code#24",
+  "slug": "large-dildo-26cm",
+
+  "name": {
+    "fa": "دیلدو سایز بزرگ ۲۶ سانتی",
+    "en": "Large Dildo 26cm"
+  },
+
+  "description": {
+    "short": "دیلدو بزرگ ۲۶ سانتی‌متری با قطر ۶ سانتی‌متر",
+    "full": "دیلدو سایز بزرگ ساخته شده از سیلیکون درجه یک با ساختاری نرم و انعطاف بالا. قابلیت چسبندگی به سطوح صاف و قابل نصب بر روی انواع کمربند. ضد آب و قابل شستشو بدون پوسیدگی. سایز طول کلی ۲۶ سانتی‌متر و قطر ۶ سانتی‌متر با رنگ پوست. طراحی بزرگ و پرکننده برای تجربه‌ای حرفه‌ای."
+  },
+
+  "categoryId": "dildos",
+  "subcategoryId": null,
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "large",
+    "extra-large",
+    "silicone",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof",
+    "realistic"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof"
+  ],
+
+  "specifications": {
+    "size": "XL",
+    "totalLengthCm": 26,
+    "diameterCm": 6,
+    "material": "medical-grade-silicone",
+    "flexibility": "medium",
+    "suctionCup": true,
+    "harnessCompatible": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0024/cover.webp",
+      "alt": "دیلدو سایز بزرگ ۲۶ سانتی",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0024/demo.mp4",
+      "alt": "دیلدو سایز بزرگ - ویدئو نمایشی",
+      "duration": 30,
+      "thumbnail": "/products/0024/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["xl", "premium", "popular"],
+
+  "keywords": [
+    "دیلدو",
+    "دیلدو بزرگ",
+    "دیلدو ۲۶ سانتی",
+    "سیلیکون",
+    "چسبدار",
+    "قطر ۶ سانتی"
+  ],
+
+  "relatedProducts": ["0018", "0028", "0031", "0033"],
+
+  "seo": {
+    "title": "دیلدو بزرگ ۲۶ سانتی‌متری با قطر ۶ سانتی | SexKala",
+    "description": "دیلدو سایز بزرگ با سیلیکون درجه یک، طول ۲۶ سانتی‌متر، قطر ۶ سانتی‌متر، قابلیت چسبندگی، قابل نصب بر روی کمربند، ضد آب."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 24,
+    "hidePrice": false
+  }
+}

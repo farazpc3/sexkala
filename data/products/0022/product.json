@@ -1,0 +1,102 @@
+{
+  "id": "0022",
+  "code": "Code#22",
+  "slug": "dildo-without-testicles",
+
+  "name": {
+    "fa": "دیلدو بدون بیضه",
+    "en": "Dildo Without Testicles"
+  },
+
+  "description": {
+    "short": "دیلدو سیلیکونی بدون بیضه با طراحی ساده",
+    "full": "دیلدو بدون بیضه ساخته شده از سیلیکون درجه یک با ساختاری نرم و انعطاف بالا. قابلیت چسبندگی به سطوح صاف و قابل نصب بر روی انواع کمربند. ضد آب و قابل شستشو بدون پوسیدگی. سایز طول کلی ۲۰ سانتی‌متر و قطر ۳ سانتی‌متر با رنگ پوست. طراحی ساده و مینیمال بدون بیضه."
+  },
+
+  "categoryId": "dildos",
+  "subcategoryId": null,
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "without-testicles",
+    "silicone",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof",
+    "minimal"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "totalLengthCm": 20,
+    "diameterCm": 3,
+    "material": "medical-grade-silicone",
+    "flexibility": "high",
+    "suctionCup": true,
+    "harnessCompatible": true,
+    "testicles": false
+  },
+
+  "images": [
+    {
+      "src": "/products/0022/cover.webp",
+      "alt": "دیلدو بدون بیضه",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0022/demo.mp4",
+      "alt": "دیلدو بدون بیضه - ویدئو نمایشی",
+      "duration": 34,
+      "thumbnail": "/products/0022/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["minimal", "popular"],
+
+  "keywords": [
+    "دیلدو",
+    "دیلدو بدون بیضه",
+    "سیلیکون",
+    "ساده",
+    "چسبدار",
+    "کمربند"
+  ],
+
+  "relatedProducts": ["0015", "0016", "0023"],
+
+  "seo": {
+    "title": "دیلدو سیلیکونی بدون بیضه با طراحی ساده | SexKala",
+    "description": "دیلدو بدون بیضه با سیلیکون درجه یک، نرم و منعطف، قابلیت چسبندگی، قابل نصب بر روی کمربند، طول ۲۰ سانتی‌متر."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 22,
+    "hidePrice": false
+  }
+}

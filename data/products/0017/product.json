@@ -1,0 +1,133 @@
+{
+  "id": "0017",
+  "code": "Code#17",
+  "slug": "medium-plain-steel-butt-plug",
+
+  "name": {
+    "fa": "بات نگیندار مدیوم",
+    "en": "Medium Plain Steel Butt Plug"
+  },
+
+  "description": {
+    "short": "بات پلاگ استیل ساده سایز مدیوم بدون نگین",
+    "full": "بات پلاگ استیل ساده بدون نگین در سایز مدیوم با جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو. طراحی مینیمال و کلاسیک با قطر ۳.۴ سانتی‌متر و طول ۸ سانتی‌متر. سطح صاف و براق برای استفاده راحت و ایمن. کاملاً وارداتی با کیفیت عالی."
+  },
+
+  "categoryId": "butt-plugs",
+  "subcategoryId": "steel",
+
+  "materialIds": ["steel"],
+
+  "brandId": null,
+
+  "colorIds": ["silver"],
+
+  "tagIds": [
+    "steel",
+    "medium",
+    "plain",
+    "hypoallergenic",
+    "imported",
+    "classic",
+    "minimal"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "durable",
+    "smooth-finish",
+    "easy-clean"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "lengthCm": 8,
+    "diameterCm": 3.4,
+    "material": "stainless-steel",
+    "plating": "chrome-plated",
+    "gemstone": false
+  },
+
+  "images": [
+    {
+      "src": "/products/0017/cover.webp",
+      "alt": "بات نگیندار مدیوم",
+      "isCover": true
+    },
+    {
+      "src": "/products/0017/photo_95.webp",
+      "alt": "بات نگیندار - نمای جلو",
+      "isCover": false
+    },
+    {
+      "src": "/products/0017/photo_96.webp",
+      "alt": "بات نگیندار - نمای کنار",
+      "isCover": false
+    },
+    {
+      "src": "/products/0017/photo_97.webp",
+      "alt": "بات نگیندار - نمای عقب",
+      "isCover": false
+    },
+    {
+      "src": "/products/0017/photo_98.webp",
+      "alt": "بات نگیندار - نمای نزدیک",
+      "isCover": false
+    },
+    {
+      "src": "/products/0017/photo_99.webp",
+      "alt": "بات نگیندار - نمای بالا",
+      "isCover": false
+    },
+    {
+      "src": "/products/0017/photo_100.webp",
+      "alt": "بات نگیندار - نمای پایین",
+      "isCover": false
+    },
+    {
+      "src": "/products/0017/photo_101.webp",
+      "alt": "بات نگیندار - نمای جعبه",
+      "isCover": false
+    },
+    {
+      "src": "/products/0017/photo_102.webp",
+      "alt": "بات نگیندار - نمای بسته‌بندی",
+      "isCover": false
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["best-seller", "classic"],
+
+  "keywords": [
+    "بات پلاگ",
+    "بات نگیندار",
+    "استیل",
+    "مدیوم",
+    "آنال",
+    "بات پلاگ استیل",
+    "ساده"
+  ],
+
+  "relatedProducts": ["0002", "0006", "0010", "0013"],
+
+  "seo": {
+    "title": "بات پلاگ استیل ساده مدیوم بدون نگین | SexKala",
+    "description": "بات پلاگ استیل ساده بدون نگین سایز مدیوم، جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو، قطر ۳.۴ سانتی‌متر، طول ۸ سانتی‌متر."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 17,
+    "hidePrice": false
+  }
+}

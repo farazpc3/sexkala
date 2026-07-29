@@ -1,0 +1,76 @@
+{
+  "id": "0002",
+  "code": "Code#2",
+  "slug": "medium-plain-steel-butt-plug",
+
+  "name": {
+    "fa": "بات نگیندار مدیوم",
+    "en": "Medium Plain Steel Butt Plug"
+  },
+
+  "description": {
+    "short": "بات پلاگ استیل ساده سایز مدیوم",
+    "full": "بات پلاگ استیل ساده بدون نگین در سایز مدیوم با جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو. طراحی مینیمال و کلاسیک با قطر ۳.۴ سانتی‌متر و طول ۸ سانتی‌متر. کاملاً وارداتی با کیفیت عالی."
+  },
+
+  "categoryId": "butt-plugs",
+  "subcategoryId": "steel",
+
+  "materialIds": ["steel"],
+
+  "brandId": null,
+
+  "colorIds": ["silver"],
+
+  "tagIds": ["steel", "medium", "plain", "hypoallergenic", "imported"],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "durable",
+    "smooth-finish"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "lengthCm": 8,
+    "diameterCm": 3.4,
+    "material": "stainless-steel",
+    "plating": "chrome-plated",
+    "gemstone": false
+  },
+
+  "images": [
+    {
+      "src": "/products/0002/cover.webp",
+      "alt": "بات نگیندار مدیوم",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["best-seller"],
+
+  "keywords": ["بات پلاگ", "بات", "استیل", "مدیوم", "آنال"],
+
+  "relatedProducts": ["0001", "0006", "0010", "0013"],
+
+  "seo": {
+    "title": "بات پلاگ استیل ساده مدیوم | SexKala",
+    "description": "بات پلاگ استیل ساده بدون نگین سایز مدیوم، جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 2,
+    "hidePrice": false
+  }
+}

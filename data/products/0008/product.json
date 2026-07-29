@@ -1,0 +1,99 @@
+{
+  "id": "0008",
+  "code": "Code#8",
+  "slug": "flower-suction-vibrator",
+
+  "name": {
+    "fa": "ویبره گل",
+    "en": "Flower Suction Vibrator"
+  },
+
+  "description": {
+    "short": "ویبراتور مکنده با ۱۲ مدل ویبره و حرکت خطی",
+    "full": "ویبراتور گل با قابلیت مکنده، ۱۲ مدل ویبره و ۱۲ مدل حرکت خطی، ضدآب و قابل شستشو، شارژی. یک طرف دارای ویبره و حرکت، طرف دیگر دارای مکنده، قابل استفاده همزمان داخل و خارج بدن، جنس سیلیکون طبی، ضد حساسیت. طراحی منحصر‌به‌فرد برای تحریک همزمان نقاط حساس."
+  },
+
+  "categoryId": "vibrators",
+  "subcategoryId": "suction",
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["pink", "purple"],
+
+  "tagIds": [
+    "suction",
+    "clitoral",
+    "waterproof",
+    "rechargeable",
+    "dual-stimulation",
+    "imported"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "waterproof",
+    "rechargeable",
+    "hypoallergenic",
+    "dual-function",
+    "silent"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "vibrationModes": 12,
+    "linearModes": 12,
+    "batteryType": "rechargeable",
+    "suctionPower": "strong",
+    "usage": "internal-external"
+  },
+
+  "images": [
+    {
+      "src": "/products/0008/cover.webp",
+      "alt": "ویبره گل",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0008/demo.mp4",
+      "alt": "ویبره گل - ویدئو نمایشی",
+      "duration": 98,
+      "thumbnail": "/products/0008/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["new", "trending"],
+
+  "keywords": [
+    "ویبراتور",
+    "ویبره گل",
+    "مکنده",
+    "تحریک کلیتوریس",
+    "شارژی",
+    "ضدآب"
+  ],
+
+  "relatedProducts": ["0005", "0025", "0029"],
+
+  "seo": {
+    "title": "ویبراتور مکنده گل با ۱۲ مدل ویبره | SexKala",
+    "description": "ویبراتور مکنده گل با ۱۲ مدل ویبره و ۱۲ مدل حرکت خطی، ضدآب، شارژی، جنس سیلیکون طبی، قابل استفاده همزمان داخل و خارج بدن."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 8,
+    "hidePrice": false
+  }
+}

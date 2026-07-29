@@ -1,0 +1,170 @@
+[
+  {
+    "id": "beginner",
+    "name": {
+      "fa": "مناسب مبتدی",
+      "en": "Beginner"
+    }
+  },
+  {
+    "id": "intermediate",
+    "name": {
+      "fa": "متوسط",
+      "en": "Intermediate"
+    }
+  },
+  {
+    "id": "advanced",
+    "name": {
+      "fa": "حرفه‌ای",
+      "en": "Advanced"
+    }
+  },
+  {
+    "id": "small",
+    "name": {
+      "fa": "کوچک",
+      "en": "Small"
+    }
+  },
+  {
+    "id": "medium",
+    "name": {
+      "fa": "متوسط",
+      "en": "Medium"
+    }
+  },
+  {
+    "id": "large",
+    "name": {
+      "fa": "بزرگ",
+      "en": "Large"
+    }
+  },
+  {
+    "id": "xl",
+    "name": {
+      "fa": "خیلی بزرگ",
+      "en": "XL"
+    }
+  },
+  {
+    "id": "anal",
+    "name": {
+      "fa": "مناسب آنال",
+      "en": "Anal"
+    }
+  },
+  {
+    "id": "vaginal",
+    "name": {
+      "fa": "مناسب واژینال",
+      "en": "Vaginal"
+    }
+  },
+  {
+    "id": "oral",
+    "name": {
+      "fa": "مناسب دهانی",
+      "en": "Oral"
+    }
+  },
+  {
+    "id": "couples",
+    "name": {
+      "fa": "مناسب زوج‌ها",
+      "en": "Couples"
+    }
+  },
+  {
+    "id": "male",
+    "name": {
+      "fa": "مخصوص آقایان",
+      "en": "Male"
+    }
+  },
+  {
+    "id": "female",
+    "name": {
+      "fa": "مخصوص بانوان",
+      "en": "Female"
+    }
+  },
+  {
+    "id": "unisex",
+    "name": {
+      "fa": "یونیسکس",
+      "en": "Unisex"
+    }
+  },
+  {
+    "id": "heart",
+    "name": {
+      "fa": "قلبی",
+      "en": "Heart"
+    }
+  },
+  {
+    "id": "rose",
+    "name": {
+      "fa": "رز",
+      "en": "Rose"
+    }
+  },
+  {
+    "id": "rabbit",
+    "name": {
+      "fa": "خرگوشی",
+      "en": "Rabbit"
+    }
+  },
+  {
+    "id": "realistic",
+    "name": {
+      "fa": "واقع‌گرایانه",
+      "en": "Realistic"
+    }
+  },
+  {
+    "id": "double-ended",
+    "name": {
+      "fa": "دو سر",
+      "en": "Double Ended"
+    }
+  },
+  {
+    "id": "curved",
+    "name": {
+      "fa": "خمیده",
+      "en": "Curved"
+    }
+  },
+  {
+    "id": "textured",
+    "name": {
+      "fa": "بافت‌دار",
+      "en": "Textured"
+    }
+  },
+  {
+    "id": "jewel",
+    "name": {
+      "fa": "نگین‌دار",
+      "en": "Jewel"
+    }
+  },
+  {
+    "id": "suction-cup",
+    "name": {
+      "fa": "مکنده",
+      "en": "Suction Cup"
+    }
+  },
+  {
+    "id": "imported",
+    "name": {
+      "fa": "وارداتی",
+      "en": "Imported"
+    }
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "id": "0015",
+  "code": "Code#15",
+  "slug": "small-anal-dildo-silicone",
+
+  "name": {
+    "fa": "دیلدو کوچک مقعدی",
+    "en": "Small Anal Dildo"
+  },
+
+  "description": {
+    "short": "دیلدو کوچک سیلیکونی مناسب برای استفاده مقعدی",
+    "full": "دیلدو کوچک مقعدی ساخته شده از سیلیکون درجه یک با ساختاری نرم و انعطاف بالا. قابلیت چسبندگی به سطوح صاف و قابل نصب بر روی انواع کمربند. ضد آب و قابل شستشو بدون پوسیدگی. سایز طول کلی ۱۷ سانتی‌متر و قطر ۳ سانتی‌متر با رنگ پوست. طراحی ارگونومیک برای استفاده راحت و ایمن در ناحیه مقعد."
+  },
+
+  "categoryId": "dildos",
+  "subcategoryId": "anal",
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "anal",
+    "small",
+    "silicone",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof"
+  ],
+
+  "specifications": {
+    "size": "S",
+    "totalLengthCm": 17,
+    "diameterCm": 3,
+    "material": "medical-grade-silicone",
+    "flexibility": "high",
+    "suctionCup": true,
+    "harnessCompatible": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0015/cover.webp",
+      "alt": "دیلدو کوچک مقعدی",
+      "isCover": true
+    },
+    {
+      "src": "/products/0015/photo_85.webp",
+      "alt": "دیلدو کوچک - نمای جلو",
+      "isCover": false
+    },
+    {
+      "src": "/products/0015/photo_86.webp",
+      "alt": "دیلدو کوچک - نمای کنار",
+      "isCover": false
+    },
+    {
+      "src": "/products/0015/photo_87.webp",
+      "alt": "دیلدو کوچک - نمای عقب",
+      "isCover": false
+    },
+    {
+      "src": "/products/0015/photo_88.webp",
+      "alt": "دیلدو کوچک - نمای نزدیک",
+      "isCover": false
+    },
+    {
+      "src": "/products/0015/photo_89.webp",
+      "alt": "دیلدو کوچک - نمای بسته‌بندی",
+      "isCover": false
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["beginner", "anal"],
+
+  "keywords": [
+    "دیلدو",
+    "دیلدو کوچک",
+    "مقعدی",
+    "آنال",
+    "سیلیکون",
+    "مبتدی",
+    "چسبدار"
+  ],
+
+  "relatedProducts": ["0016", "0023", "0024"],
+
+  "seo": {
+    "title": "دیلدو سیلیکونی کوچک مخصوص مقعد | SexKala",
+    "description": "دیلدو کوچک مقعدی با سیلیکون درجه یک، نرم و منعطف، قابلیت چسبندگی، قابل نصب بر روی کمربند، طول ۱۷ سانتی‌متر، ضد آب."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 15,
+    "hidePrice": false
+  }
+}

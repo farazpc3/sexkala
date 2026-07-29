@@ -1,0 +1,114 @@
+{
+  "id": "0007",
+  "code": "Code#7",
+  "slug": "penis-sleeve-extender",
+
+  "name": {
+    "fa": "روکش آلت ساده",
+    "en": "Penis Sleeve Extender"
+  },
+
+  "description": {
+    "short": "روکش آلت بزرگ کننده با سیلیکون طبی",
+    "full": "روکش آلت بزرگ کننده ساده با قابلیت افزایش طول تا ۵ سانتی‌متر و افزایش قطر تا ۱ سانتی‌متر. ساخته شده از سیلیکون طبی با کیفیت، کاملاً منعطف و طبیعی، ضد حساسیت، قابل شستشو با چسبندگی بالا. طراحی ارگونومیک برای افزایش لذت طرفین."
+  },
+
+  "categoryId": "penis-sleeves",
+  "subcategoryId": null,
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "penis-sleeve",
+    "extender",
+    "enlargement",
+    "silicone",
+    "flexible",
+    "natural",
+    "hypoallergenic",
+    "washable"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "natural-feel",
+    "high-grip"
+  ],
+
+  "specifications": {
+    "size": "L",
+    "lengthCm": 17,
+    "diameterCm": 3.5,
+    "lengthIncreaseCm": 5,
+    "diameterIncreaseCm": 1,
+    "material": "medical-grade-silicone"
+  },
+
+  "images": [
+    {
+      "src": "/products/0007/cover.webp",
+      "alt": "روکش آلت ساده",
+      "isCover": true
+    },
+    {
+      "src": "/products/0007/photo_17.webp",
+      "alt": "روکش آلت - نمای جلو",
+      "isCover": false
+    },
+    {
+      "src": "/products/0007/photo_18.webp",
+      "alt": "روکش آلت - نمای کنار",
+      "isCover": false
+    },
+    {
+      "src": "/products/0007/photo_19.webp",
+      "alt": "روکش آلت - نمای عقب",
+      "isCover": false
+    },
+    {
+      "src": "/products/0007/photo_20.webp",
+      "alt": "روکش آلت - نمای نزدیک",
+      "isCover": false
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["popular"],
+
+  "keywords": [
+    "روکش آلت",
+    "بزرگ کننده آلت",
+    "کاندوم بزرگ کننده",
+    "سیلیکون",
+    "افزایش طول",
+    "افزایش قطر",
+    "لذت جنسی"
+  ],
+
+  "relatedProducts": ["0003"],
+
+  "seo": {
+    "title": "روکش آلت بزرگ کننده سیلیکونی | SexKala",
+    "description": "روکش آلت بزرگ کننده با افزایش طول ۵ سانتی‌متر و قطر ۱ سانتی‌متر، جنس سیلیکون طبی، منعطف، ضد حساسیت و قابل شستشو."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 7,
+    "hidePrice": false
+  }
+}

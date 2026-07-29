@@ -1,0 +1,102 @@
+{
+  "id": "0009",
+  "code": "Code#9",
+  "slug": "large-strapless-dildo-harness",
+
+  "name": {
+    "fa": "دیلدو کمری لارج",
+    "en": "Large Strapless Dildo with Harness"
+  },
+
+  "description": {
+    "short": "دیلدو بزرگ کمری با سیلیکون طبی و کمربند",
+    "full": "دیلدو کمری در سایز بزرگ با جنس سیلیکون طبی و کیفیت تضمینی، پشت چسبدار و کمربند خور. طول کل ۲۴ سانتی‌متر با طول مفید ۲۰ سانتی‌متر و قطر ۴ سانتی‌متر. کاملاً وارداتی، بهداشتی با بسته‌بندی وکیوم و جعبه. طراحی ارگونومیک برای استفاده راحت و ایمن."
+  },
+
+  "categoryId": "dildos",
+  "subcategoryId": "strapless",
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "strapless",
+    "harness",
+    "large",
+    "silicone",
+    "imported",
+    "vacuum-packed",
+    "premium"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "vacuum-sealed",
+    "suction-cup",
+    "harness-compatible"
+  ],
+
+  "specifications": {
+    "size": "XL",
+    "totalLengthCm": 24,
+    "usableLengthCm": 20,
+    "diameterCm": 4,
+    "material": "medical-grade-silicone",
+    "harness": true,
+    "suctionCup": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0009/cover.webp",
+      "alt": "دیلدو کمری لارج",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0009/demo.mp4",
+      "alt": "دیلدو کمری - ویدئو نمایشی",
+      "duration": 37,
+      "thumbnail": "/products/0009/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["premium", "recommended"],
+
+  "keywords": [
+    "دیلدو",
+    "دیلدو کمری",
+    "کمربند",
+    "دیلدو بزرگ",
+    "سیلیکون",
+    "وارداتی",
+    "بسته بندی وکیوم"
+  ],
+
+  "relatedProducts": ["0014", "0016", "0018", "0020"],
+
+  "seo": {
+    "title": "دیلدو کمری بزرگ با سیلیکون طبی و کمربند | SexKala",
+    "description": "دیلدو کمری سایز بزرگ با سیلیکون طبی، پشت چسبدار، کمربند خور، طول ۲۴ سانتی‌متر، کاملاً وارداتی با بسته‌بندی وکیوم."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 9,
+    "hidePrice": false
+  }
+}

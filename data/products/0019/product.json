@@ -1,0 +1,91 @@
+{
+  "id": "0019",
+  "code": "Code#19",
+  "slug": "bdsm-set-10-piece",
+
+  "name": {
+    "fa": "ست بی دی اس ام",
+    "en": "BDSM Set 10-Piece"
+  },
+
+  "description": {
+    "short": "ست ۱۰ تکه کامل BDSM با کیفیت عالی",
+    "full": "ست ۱۰ تکه کامل BDSM کاملاً وارداتی با جنس ابریشم بافتی و داخلی خزدار. ضد حساسیت و بدون بو با ابعاد استاندارد و یراق‌آلات استیل. شامل تمامی ابزارهای ضروری برای بازی‌های BDSM با کیفیت بالا و طراحی ارگونومیک."
+  },
+
+  "categoryId": "bondage",
+  "subcategoryId": "sets",
+
+  "materialIds": ["silk", "steel"],
+
+  "brandId": null,
+
+  "colorIds": ["black", "red"],
+
+  "tagIds": [
+    "bdsm",
+    "set",
+    "10-piece",
+    "imported",
+    "premium",
+    "silk",
+    "steel-hardware"
+  ],
+
+  "featureIds": [
+    "hypoallergenic",
+    "odor-free",
+    "premium-quality",
+    "durable",
+    "standard-size"
+  ],
+
+  "specifications": {
+    "pieces": 10,
+    "material": "silk-fabric",
+    "lining": "fleece",
+    "hardware": "stainless-steel",
+    "size": "standard"
+  },
+
+  "images": [
+    {
+      "src": "/products/0019/cover.webp",
+      "alt": "ست بی دی اس ام",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["premium", "bdsm", "new"],
+
+  "keywords": [
+    "BDSM",
+    "ست BDSM",
+    "بی دی اس ام",
+    "ابزار جنسی",
+    "باندیج",
+    "نقاب",
+    "دستبند"
+  ],
+
+  "relatedProducts": ["0004", "0026"],
+
+  "seo": {
+    "title": "ست ۱۰ تکه کامل BDSM با کیفیت عالی | SexKala",
+    "description": "ست ۱۰ تکه کامل BDSM با جنس ابریشم بافتی، داخلی خزدار، یراق‌آلات استیل، ضد حساسیت و بدون بو، کاملاً وارداتی."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 19,
+    "hidePrice": false
+  }
+}

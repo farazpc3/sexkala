@@ -1,0 +1,98 @@
+[
+  {
+    "id": "silicone",
+    "name": {
+      "fa": "سیلیکون",
+      "en": "Silicone"
+    },
+    "bodySafe": true
+  },
+  {
+    "id": "medical-silicone",
+    "name": {
+      "fa": "سیلیکون طبی",
+      "en": "Medical Silicone"
+    },
+    "bodySafe": true
+  },
+  {
+    "id": "tpe",
+    "name": {
+      "fa": "TPE",
+      "en": "TPE"
+    },
+    "bodySafe": true
+  },
+  {
+    "id": "pvc",
+    "name": {
+      "fa": "PVC",
+      "en": "PVC"
+    },
+    "bodySafe": false
+  },
+  {
+    "id": "abs",
+    "name": {
+      "fa": "ABS",
+      "en": "ABS Plastic"
+    },
+    "bodySafe": true
+  },
+  {
+    "id": "stainless-steel",
+    "name": {
+      "fa": "استیل ضد زنگ",
+      "en": "Stainless Steel"
+    },
+    "bodySafe": true
+  },
+  {
+    "id": "plated-steel",
+    "name": {
+      "fa": "استیل آبکاری شده",
+      "en": "Plated Steel"
+    },
+    "bodySafe": true
+  },
+  {
+    "id": "glass",
+    "name": {
+      "fa": "شیشه بوروسیلیکات",
+      "en": "Borosilicate Glass"
+    },
+    "bodySafe": true
+  },
+  {
+    "id": "pu-leather",
+    "name": {
+      "fa": "چرم مصنوعی",
+      "en": "PU Leather"
+    },
+    "bodySafe": false
+  },
+  {
+    "id": "genuine-leather",
+    "name": {
+      "fa": "چرم طبیعی",
+      "en": "Genuine Leather"
+    },
+    "bodySafe": false
+  },
+  {
+    "id": "wood",
+    "name": {
+      "fa": "چوب",
+      "en": "Wood"
+    },
+    "bodySafe": false
+  },
+  {
+    "id": "fabric",
+    "name": {
+      "fa": "پارچه",
+      "en": "Fabric"
+    },
+    "bodySafe": false
+  }
+]

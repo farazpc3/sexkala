@@ -1,0 +1,99 @@
+{
+  "id": "0005",
+  "code": "Code#5",
+  "slug": "remote-control-vibrator",
+
+  "name": {
+    "fa": "ویبره لش بندار",
+    "en": "Remote Control Vibrator"
+  },
+
+  "description": {
+    "short": "ویبراتور کنترل از راه دور با ۹ مدل ویبره",
+    "full": "ویبراتور لش بندار با ۹ مدل ویبره، ضدآب و قابل شستشو، شارژی، قابل استفاده داخل واژن و مقعد، جنس سیلیکون طبی با دم انعطاف‌پذیر، مقاوم به پارگی، ضد حساسیت، کم صدا، برد ۲۰ متر، کنترل از راه دور و قابلیت اتصال به گوشی."
+  },
+
+  "categoryId": "vibrators",
+  "subcategoryId": "remote-controlled",
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["pink", "purple"],
+
+  "tagIds": [
+    "remote-control",
+    "waterproof",
+    "rechargeable",
+    "app-connected",
+    "anal-safe"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "waterproof",
+    "rechargeable",
+    "hypoallergenic",
+    "flexible",
+    "quiet"
+  ],
+
+  "specifications": {
+    "size": "M",
+    "vibrationModes": 9,
+    "remoteRange": 20,
+    "batteryType": "rechargeable",
+    "connectionType": "bluetooth",
+    "appControl": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0005/cover.webp",
+      "alt": "ویبره لش بندار",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0005/demo.mp4",
+      "alt": "ویبره لش بندار - ویدئو نمایشی",
+      "duration": 44,
+      "thumbnail": "/products/0005/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["new", "popular"],
+
+  "keywords": [
+    "ویبراتور",
+    "لش بندار",
+    "کنترل از راه دور",
+    "شارژی",
+    "ضدآب",
+    "اتصال به گوشی",
+    "ریموت"
+  ],
+
+  "relatedProducts": ["0008", "0025", "0029"],
+
+  "seo": {
+    "title": "ویبراتور کنترل از راه دور لش بندار | SexKala",
+    "description": "ویبراتور لش بندار با ۹ مدل ویبره، ضدآب، شارژی، قابل استفاده داخل واژن و مقعد، جنس سیلیکون طبی با کنترل از راه دور."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 5,
+    "hidePrice": false
+  }
+}

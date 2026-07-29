@@ -1,16 +1,53 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
-const categories = [
-  { id: 1, title: "دسته ۱" },
-  { id: 2, title: "دسته ۲" },
-  { id: 3, title: "دسته ۳" },
-  { id: 4, title: "دسته ۴" },
-];
+// This will be passed from the parent page with real category data
+interface CategoriesProps {
+  categories?: Array<{
+    id: string;
+    name: {
+      fa: string;
+      en: string;
+    };
+    slug: string;
+    count: number;
+    icon?: string;
+  }>;
+}
 
-export default function Categories() {
+export default function Categories({ categories = [] }: CategoriesProps) {
+  // If no categories passed, show placeholder
+  const displayCategories =
+    categories.length > 0
+      ? categories
+      : [
+          {
+            id: "butt-plugs",
+            name: { fa: "بات پلاگ", en: "Butt Plugs" },
+            slug: "butt-plugs",
+            count: 0,
+          },
+          {
+            id: "dildos",
+            name: { fa: "دیلدو", en: "Dildos" },
+            slug: "dildos",
+            count: 0,
+          },
+          {
+            id: "vibrators",
+            name: { fa: "ویبراتور", en: "Vibrators" },
+            slug: "vibrators",
+            count: 0,
+          },
+          {
+            id: "penis-sleeves",
+            name: { fa: "روکش آلت", en: "Penis Sleeves" },
+            slug: "penis-sleeves",
+            count: 0,
+          },
+        ];
+
   return (
     <section id="categories" className="relative mb-16">
       {/* Background mesh */}
@@ -30,9 +67,10 @@ export default function Categories() {
 
       {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {categories.map((cat) => (
-          <Card
+        {displayCategories.map((cat) => (
+          <Link
             key={cat.id}
+            href={`/categories/${cat.slug}`}
             className="
               glass rounded-2xl p-6 text-center shadow-xl
               border border-white/20 dark:border-white/10
@@ -42,7 +80,7 @@ export default function Categories() {
               duration-300 ease-out
             "
           >
-            {/* Image placeholder */}
+            {/* Icon placeholder - you can replace with actual icons */}
             <div
               className="
               h-24 rounded-xl 
@@ -50,19 +88,36 @@ export default function Categories() {
               border border-white/20 dark:border-white/10 
               backdrop-blur-md 
               flex items-center justify-center 
-              text-sm text-secondary 
+              text-4xl
               mb-4
             "
             >
-              تصویر دسته {cat.id}
+              {cat.icon || "📦"}
             </div>
 
             {/* Title */}
             <h3 className="text-lg font-semibold text-primary dark:text-inverse drop-shadow-md">
-              {cat.title}
+              {cat.name.fa}
             </h3>
-          </Card>
+
+            {/* Count */}
+            <p className="text-sm text-muted mt-1">{cat.count} محصول</p>
+          </Link>
         ))}
+      </div>
+
+      {/* View All Categories */}
+      <div className="text-center mt-8">
+        <Link
+          href="/categories"
+          className="
+            inline-block px-6 py-2 rounded-full
+            glass hover:bg-white/10 transition-colors
+            text-sm font-medium
+          "
+        >
+          مشاهده همه دسته‌بندی‌ها
+        </Link>
       </div>
 
       {/* Footer text */}

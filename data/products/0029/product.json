@@ -1,0 +1,96 @@
+{
+  "id": "0029",
+  "code": "Code#29",
+  "slug": "rechargeable-magic-microphone-vibrator",
+
+  "name": {
+    "fa": "ویبراتور میکروفنی مجیک",
+    "en": "Rechargeable Magic Microphone Vibrator"
+  },
+
+  "description": {
+    "short": "ویبراتور میکروفنی شارژی با ۱۰ مدل ویبره",
+    "full": "ویبراتور میکروفنی مجیک با سایز بزرگ و ۱۰ مدل ویبره. جنس سری سیلیکون طبی با ضد حساسیت، سری منعطف و فوق‌العاده قدرتمند. شارژی با قابلیت استفاده مکرر. طراحی میکروفنی با قدرت بالا برای تحریک عمیق و مؤثر."
+  },
+
+  "categoryId": "vibrators",
+  "subcategoryId": "rechargeable",
+
+  "materialIds": ["silicone", "abs"],
+
+  "brandId": null,
+
+  "colorIds": ["purple", "pink"],
+
+  "tagIds": [
+    "rechargeable",
+    "microphone",
+    "powerful",
+    "silicone",
+    "hypoallergenic",
+    "flexible"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "powerful",
+    "rechargeable"
+  ],
+
+  "specifications": {
+    "size": "L",
+    "vibrationModes": 10,
+    "powerSource": "rechargeable",
+    "material": "medical-grade-silicone"
+  },
+
+  "images": [
+    {
+      "src": "/products/0029/cover.webp",
+      "alt": "ویبراتور میکروفنی مجیک",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0029/demo.mp4",
+      "alt": "ویبراتور میکروفنی مجیک - ویدئو نمایشی",
+      "duration": 24,
+      "thumbnail": "/products/0029/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["rechargeable", "powerful", "popular"],
+
+  "keywords": [
+    "ویبراتور",
+    "میکروفنی",
+    "شارژی",
+    "ویبره قدرتمند",
+    "سیلیکون",
+    "مجیک"
+  ],
+
+  "relatedProducts": ["0005", "0008", "0025", "0030"],
+
+  "seo": {
+    "title": "ویبراتور میکروفنی شارژی قدرتمند با ۱۰ مدل ویبره | SexKala",
+    "description": "ویبراتور میکروفنی شارژی با سایز بزرگ، ۱۰ مدل ویبره، سری سیلیکون طبی، ضد حساسیت، فوق‌العاده قدرتمند."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 29,
+    "hidePrice": false
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "0010",
+  "code": "Code#10",
+  "slug": "rocket-shaped-steel-butt-plug",
+
+  "name": {
+    "fa": "بات موشکی",
+    "en": "Rocket-Shaped Steel Butt Plug"
+  },
+
+  "description": {
+    "short": "بات پلاگ موشکی شکل استیل آبکاری شده",
+    "full": "بات پلاگ موشکی شکل با جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو، کاملاً وارداتی. طراحی مدرن و ارگونومیک با قطر ۳.۸ سانتی‌متر و طول ۱۰ سانتی‌متر. سطح صاف و براق با کیفیت بالا برای استفاده ایمن و راحت."
+  },
+
+  "categoryId": "butt-plugs",
+  "subcategoryId": "steel",
+
+  "materialIds": ["steel"],
+
+  "brandId": null,
+
+  "colorIds": ["silver"],
+
+  "tagIds": [
+    "rocket-shape",
+    "steel",
+    "imported",
+    "hypoallergenic",
+    "smooth",
+    "anal",
+    "modern-design"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "durable",
+    "smooth-finish",
+    "easy-clean"
+  ],
+
+  "specifications": {
+    "size": "L",
+    "lengthCm": 10,
+    "diameterCm": 3.8,
+    "material": "stainless-steel",
+    "plating": "chrome-plated"
+  },
+
+  "images": [
+    {
+      "src": "/products/0010/cover.webp",
+      "alt": "بات موشکی استیل",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["new"],
+
+  "keywords": ["بات پلاگ", "بات موشکی", "استیل", "آنال", "موشکی شکل"],
+
+  "relatedProducts": ["0002", "0006", "0013", "0017"],
+
+  "seo": {
+    "title": "بات پلاگ استیل موشکی شکل | SexKala",
+    "description": "بات پلاگ موشکی شکل با جنس استیل آبکاری شده، ضد حساسیت، قابل شستشو، قطر ۳.۸ سانتی‌متر، طول ۱۰ سانتی‌متر."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 10,
+    "hidePrice": false
+  }
+}

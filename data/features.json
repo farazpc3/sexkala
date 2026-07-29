@@ -1,0 +1,142 @@
+[
+  {
+    "id": "body-safe",
+    "name": {
+      "fa": "ایمن برای بدن",
+      "en": "Body Safe"
+    }
+  },
+  {
+    "id": "medical-grade",
+    "name": {
+      "fa": "سیلیکون پزشکی",
+      "en": "Medical Grade"
+    }
+  },
+  {
+    "id": "waterproof",
+    "name": {
+      "fa": "ضد آب",
+      "en": "Waterproof"
+    }
+  },
+  {
+    "id": "washable",
+    "name": {
+      "fa": "قابل شستشو",
+      "en": "Washable"
+    }
+  },
+  {
+    "id": "rechargeable",
+    "name": {
+      "fa": "شارژی",
+      "en": "Rechargeable"
+    }
+  },
+  {
+    "id": "usb-charging",
+    "name": {
+      "fa": "شارژ USB",
+      "en": "USB Charging"
+    }
+  },
+  {
+    "id": "battery-powered",
+    "name": {
+      "fa": "باتری خور",
+      "en": "Battery Powered"
+    }
+  },
+  {
+    "id": "remote-control",
+    "name": {
+      "fa": "ریموت کنترل",
+      "en": "Remote Control"
+    }
+  },
+  {
+    "id": "app-controlled",
+    "name": {
+      "fa": "کنترل با اپلیکیشن",
+      "en": "App Controlled"
+    }
+  },
+  {
+    "id": "vibrating",
+    "name": {
+      "fa": "ویبره",
+      "en": "Vibrating"
+    }
+  },
+  {
+    "id": "rotating",
+    "name": {
+      "fa": "چرخشی",
+      "en": "Rotating"
+    }
+  },
+  {
+    "id": "thrusting",
+    "name": {
+      "fa": "حرکت رفت و برگشتی",
+      "en": "Thrusting"
+    }
+  },
+  {
+    "id": "suction",
+    "name": {
+      "fa": "مکنده",
+      "en": "Suction"
+    }
+  },
+  {
+    "id": "heating",
+    "name": {
+      "fa": "گرمایشی",
+      "en": "Heating"
+    }
+  },
+  {
+    "id": "inflatable",
+    "name": {
+      "fa": "بادی",
+      "en": "Inflatable"
+    }
+  },
+  {
+    "id": "flexible",
+    "name": {
+      "fa": "انعطاف‌پذیر",
+      "en": "Flexible"
+    }
+  },
+  {
+    "id": "realistic",
+    "name": {
+      "fa": "واقع‌گرایانه",
+      "en": "Realistic"
+    }
+  },
+  {
+    "id": "quiet",
+    "name": {
+      "fa": "کم‌صدا",
+      "en": "Quiet"
+    }
+  },
+  {
+    "id": "hands-free",
+    "name": {
+      "fa": "بدون نیاز به دست",
+      "en": "Hands Free"
+    }
+  },
+  {
+    "id": "discreet",
+    "name": {
+      "fa": "مخفی و کم‌جلب توجه",
+      "en": "Discreet"
+    }
+  }
+]

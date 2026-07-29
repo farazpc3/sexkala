@@ -1,0 +1,96 @@
+{
+  "id": "0014",
+  "code": "Code#14",
+  "slug": "pu-leather-harness-belt",
+
+  "name": {
+    "fa": "کمربند چرمی",
+    "en": "PU Leather Harness Belt"
+  },
+
+  "description": {
+    "short": "کمربند چرم PU با قابلیت تنظیم دور کمر",
+    "full": "کمربند چرم PU با کیفیت بالا و قابلیت تنظیم دور کمر. طراحی ارگونومیک و مقاوم با جنس چرم مصنوعی درجه یک. مناسب برای استفاده با انواع دیلدوها و اتصالات. قابلیت تنظیم سایز برای راحتی بیشتر. محصول کاملاً وارداتی با کیفیت تضمینی."
+  },
+
+  "categoryId": "belts",
+  "subcategoryId": null,
+
+  "materialIds": ["pu-leather"],
+
+  "brandId": null,
+
+  "colorIds": ["black"],
+
+  "tagIds": ["harness", "belt", "leather", "adjustable", "imported", "premium"],
+
+  "featureIds": ["durable", "adjustable", "comfortable", "premium-quality"],
+
+  "specifications": {
+    "size": "adjustable",
+    "material": "PU-leather",
+    "adjustmentType": "buckle",
+    "hardware": "stainless-steel"
+  },
+
+  "images": [
+    {
+      "src": "/products/0014/cover.webp",
+      "alt": "کمربند چرمی",
+      "isCover": true
+    },
+    {
+      "src": "/products/0014/photo_80.webp",
+      "alt": "کمربند چرمی - نمای جلو",
+      "isCover": false
+    },
+    {
+      "src": "/products/0014/photo_81.webp",
+      "alt": "کمربند چرمی - نمای کنار",
+      "isCover": false
+    },
+    {
+      "src": "/products/0014/photo_82.webp",
+      "alt": "کمربند چرمی - نمای عقب",
+      "isCover": false
+    },
+    {
+      "src": "/products/0014/photo_83.webp",
+      "alt": "کمربند چرمی - نمای نزدیک",
+      "isCover": false
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["premium", "accessory"],
+
+  "keywords": [
+    "کمربند",
+    "چرم",
+    "هارنس",
+    "کمربند چرمی",
+    "اتصال دیلدو",
+    "قابل تنظیم",
+    "وارداتی"
+  ],
+
+  "relatedProducts": ["0009", "0016", "0018", "0020"],
+
+  "seo": {
+    "title": "کمربند چرمی قابل تنظیم هارنس | SexKala",
+    "description": "کمربند چرم PU با قابلیت تنظیم دور کمر، جنس چرم مصنوعی درجه یک، مناسب برای استفاده با انواع دیلدوها، کاملاً وارداتی."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 14,
+    "hidePrice": false
+  }
+}

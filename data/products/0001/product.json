@@ -1,0 +1,76 @@
+{
+  "id": "0001",
+  "code": "Code#1",
+  "slug": "heart-silicone-butt-plug",
+
+  "name": {
+    "fa": "بات سیلیکونی قلبی",
+    "en": "Heart Silicone Butt Plug"
+  },
+
+  "description": {
+    "short": "بات پلاگ سیلیکونی قلبی سایز مدیوم",
+    "full": "بات پلاگ سیلیکونی قلبی با کیفیت درجه یک، ضد حساسیت، قابل شستشو، دارای کیف و کاملاً وارداتی. طراحی قلبی شکل منحصربه‌فرد با نگین تزئینی رندوم."
+  },
+
+  "categoryId": "butt-plugs",
+  "subcategoryId": "silicone",
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["random"],
+
+  "tagIds": [
+    "heart",
+    "silicone",
+    "medium",
+    "gemstone",
+    "imported",
+    "anal",
+    "hypoallergenic"
+  ],
+
+  "featureIds": ["body-safe", "washable", "hypoallergenic", "flexible"],
+
+  "specifications": {
+    "size": "M",
+    "lengthCm": 8,
+    "diameterCm": 3.5,
+    "material": "silicone"
+  },
+
+  "images": [
+    {
+      "src": "/products/0001/cover.webp",
+      "alt": "بات سیلیکونی قلبی",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["recommended"],
+
+  "keywords": ["بات پلاگ", "بات", "سیلیکونی", "قلبی", "آنال"],
+
+  "relatedProducts": ["0002", "0006", "0012"],
+
+  "seo": {
+    "title": "بات سیلیکونی قلبی با نگین | SexKala",
+    "description": "بات پلاگ سیلیکونی قلبی سایز مدیوم، ضد حساسیت، قابل شستشو، دارای کیف و کاملاً وارداتی."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 1,
+    "hidePrice": false
+  }
+}

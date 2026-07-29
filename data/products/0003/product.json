@@ -1,0 +1,84 @@
+{
+  "id": "0003",
+  "code": "Code#3",
+  "slug": "penis-sleeve-extender",
+
+  "name": {
+    "fa": "روکش آلت ساده",
+    "en": "Penis Sleeve Extender"
+  },
+
+  "description": {
+    "short": "روکش آلت بزرگ کننده با سیلیکون طبی",
+    "full": "روکش آلت بزرگ کننده ساده با قابلیت افزایش طول تا ۵ سانتی‌متر و افزایش قطر تا ۱ سانتی‌متر. ساخته شده از سیلیکون طبی با کیفیت، کاملاً منعطف و طبیعی، ضد حساسیت، قابل شستشو با چسبندگی بالا. طراحی ارگونومیک برای افزایش لذت طرفین."
+  },
+
+  "categoryId": "penis-sleeves",
+  "subcategoryId": null,
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "penis-sleeve",
+    "extender",
+    "enlargement",
+    "silicone",
+    "flexible",
+    "hypoallergenic"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "natural-feel",
+    "high-grip"
+  ],
+
+  "specifications": {
+    "size": "L",
+    "lengthCm": 17,
+    "diameterCm": 3.5,
+    "lengthIncreaseCm": 5,
+    "diameterIncreaseCm": 1,
+    "material": "medical-grade-silicone"
+  },
+
+  "images": [
+    {
+      "src": "/products/0003/cover.webp",
+      "alt": "روکش آلت ساده",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["popular"],
+
+  "keywords": ["روکش آلت", "بزرگ کننده", "سیلیکون", "افزایش طول", "افزایش قطر"],
+
+  "relatedProducts": [],
+
+  "seo": {
+    "title": "روکش آلت بزرگ کننده سیلیکونی | SexKala",
+    "description": "روکش آلت بزرگ کننده با افزایش طول ۵ سانتی‌متر و قطر ۱ سانتی‌متر، جنس سیلیکون طبی، منعطف، ضد حساسیت."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": true,
+    "sortOrder": 3,
+    "hidePrice": false
+  }
+}

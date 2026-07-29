@@ -1,0 +1,96 @@
+{
+  "id": "0016",
+  "code": "Code#16",
+  "slug": "large-silicone-dildo",
+
+  "name": {
+    "fa": "دیلدو بزرگ",
+    "en": "Large Silicone Dildo"
+  },
+
+  "description": {
+    "short": "دیلدو بزرگ سیلیکونی با طراحی طبیعی",
+    "full": "دیلدو بزرگ ساخته شده از سیلیکون درجه یک با ساختاری نرم و انعطاف بالا. قابلیت چسبندگی به سطوح صاف و قابل نصب بر روی انواع کمربند. ضد آب و قابل شستشو بدون پوسیدگی. سایز طول کلی ۲۴ سانتی‌متر و قطر ۴.۵ سانتی‌متر با رنگ پوست. طراحی واقع‌گرایانه و ارگونومیک برای حداکثر لذت."
+  },
+
+  "categoryId": "dildos",
+  "subcategoryId": null,
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "large",
+    "silicone",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof",
+    "realistic"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof",
+    "realistic-design"
+  ],
+
+  "specifications": {
+    "size": "L",
+    "totalLengthCm": 24,
+    "diameterCm": 4.5,
+    "material": "medical-grade-silicone",
+    "flexibility": "medium",
+    "suctionCup": true,
+    "harnessCompatible": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0016/cover.webp",
+      "alt": "دیلدو بزرگ",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["recommended", "popular"],
+
+  "keywords": [
+    "دیلدو",
+    "دیلدو بزرگ",
+    "سیلیکون",
+    "چسبدار",
+    "کمربند",
+    "ضدآب",
+    "طبیعی"
+  ],
+
+  "relatedProducts": ["0009", "0015", "0018", "0020"],
+
+  "seo": {
+    "title": "دیلدو بزرگ سیلیکونی با طراحی طبیعی | SexKala",
+    "description": "دیلدو بزرگ با سیلیکون درجه یک، نرم و منعطف، قابلیت چسبندگی، قابل نصب بر روی کمربند، طول ۲۴ سانتی‌متر، ضد آب."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 16,
+    "hidePrice": false
+  }
+}

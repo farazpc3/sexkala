@@ -1,0 +1,102 @@
+{
+  "id": "0018",
+  "code": "Code#18",
+  "slug": "large-dildo-thick-silicone",
+
+  "name": {
+    "fa": "دیلدو بزرگ ضخیم",
+    "en": "Large Thick Silicone Dildo"
+  },
+
+  "description": {
+    "short": "دیلدو بزرگ سیلیکونی با قطر ۵ سانتی‌متر",
+    "full": "دیلدو بزرگ ساخته شده از سیلیکون درجه یک با ساختاری نرم و انعطاف بالا. قابلیت چسبندگی به سطوح صاف و قابل نصب بر روی انواع کمربند. ضد آب و قابل شستشو بدون پوسیدگی. سایز طول کلی ۲۴ سانتی‌متر و قطر ۵ سانتی‌متر با رنگ پوست. طراحی ضخیم و پرکننده برای تجربه‌ای متفاوت."
+  },
+
+  "categoryId": "dildos",
+  "subcategoryId": null,
+
+  "materialIds": ["silicone"],
+
+  "brandId": null,
+
+  "colorIds": ["skin-tone"],
+
+  "tagIds": [
+    "large",
+    "thick",
+    "silicone",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof"
+  ],
+
+  "featureIds": [
+    "body-safe",
+    "washable",
+    "hypoallergenic",
+    "flexible",
+    "suction-cup",
+    "harness-compatible",
+    "waterproof"
+  ],
+
+  "specifications": {
+    "size": "XL",
+    "totalLengthCm": 24,
+    "diameterCm": 5,
+    "material": "medical-grade-silicone",
+    "flexibility": "medium",
+    "suctionCup": true,
+    "harnessCompatible": true
+  },
+
+  "images": [
+    {
+      "src": "/products/0018/cover.webp",
+      "alt": "دیلدو بزرگ ضخیم",
+      "isCover": true
+    }
+  ],
+
+  "videos": [
+    {
+      "src": "/products/0018/demo.mp4",
+      "alt": "دیلدو بزرگ ضخیم - ویدئو نمایشی",
+      "duration": 64,
+      "thumbnail": "/products/0018/video_thumb.webp"
+    }
+  ],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["premium", "popular"],
+
+  "keywords": [
+    "دیلدو",
+    "دیلدو بزرگ",
+    "دیلدو ضخیم",
+    "سیلیکون",
+    "چسبدار",
+    "کمربند",
+    "ضدآب"
+  ],
+
+  "relatedProducts": ["0009", "0016", "0020", "0024"],
+
+  "seo": {
+    "title": "دیلدو بزرگ ضخیم با قطر ۵ سانتی‌متر | SexKala",
+    "description": "دیلدو بزرگ با سیلیکون درجه یک، قطر ۵ سانتی‌متر، قابلیت چسبندگی، قابل نصب بر روی کمربند، ضد آب."
+  },
+
+  "display": {
+    "featured": true,
+    "showOnHomepage": true,
+    "sortOrder": 18,
+    "hidePrice": false
+  }
+}

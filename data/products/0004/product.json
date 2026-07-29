@@ -1,0 +1,67 @@
+{
+  "id": "0004",
+  "code": "Code#4",
+  "slug": "whip",
+
+  "name": {
+    "fa": "شلاق",
+    "en": "Whip"
+  },
+
+  "description": {
+    "short": "شلاق چرمی با دسته چوبی",
+    "full": "شلاق با دسته چوبی و چرم مصنوعی با تراکم بالا. طراحی ارگونومیک و مقاوم برای استفاده در بازی‌های BDSM. کیفیت ساخت عالی با مواد درجه یک."
+  },
+
+  "categoryId": "whips",
+  "subcategoryId": null,
+
+  "materialIds": ["pu-leather", "wood"],
+
+  "brandId": null,
+
+  "colorIds": ["black"],
+
+  "tagIds": ["whip", "flogger", "bdsm", "leather", "wood"],
+
+  "featureIds": ["durable", "high-density"],
+
+  "specifications": {
+    "handleMaterial": "wood",
+    "material": "pu-leather",
+    "density": "high"
+  },
+
+  "images": [
+    {
+      "src": "/products/0004/cover.webp",
+      "alt": "شلاق چرمی",
+      "isCover": true
+    }
+  ],
+
+  "videos": [],
+
+  "price": null,
+  "currency": "IRT",
+
+  "status": "available",
+
+  "badges": ["bdsm"],
+
+  "keywords": ["شلاق", "BDSM", "چرم", "دسته چوبی", "بازی جنسی"],
+
+  "relatedProducts": ["0019", "0026"],
+
+  "seo": {
+    "title": "شلاق چرمی با دسته چوبی | SexKala",
+    "description": "شلاق با دسته چوبی و چرم مصنوعی با تراکم بالا، طراحی ارگونومیک و مقاوم برای استفاده در بازی‌های BDSM."
+  },
+
+  "display": {
+    "featured": false,
+    "showOnHomepage": false,
+    "sortOrder": 4,
+    "hidePrice": false
+  }
+}

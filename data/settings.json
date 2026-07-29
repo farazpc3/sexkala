@@ -1,0 +1,52 @@
+{
+  "store": {
+    "name": "SexKala",
+    "description": "فروشگاه محصولات زناشویی"
+  },
+
+  "contact": {
+    "telegram": {
+      "username": "Ads_shopes",
+      "url": "https://t.me/Ads_shopes"
+    },
+    "channel": {
+      "username": "sexyy_toys",
+      "url": "https://t.me/sexyy_toys"
+    }
+  },
+
+  "currency": {
+    "code": "IRT",
+    "symbol": "تومان"
+  },
+
+  "catalog": {
+    "productsPerPage": 24,
+    "relatedProductsCount": 4,
+    "newProductDays": 30
+  },
+
+  "homepage": {
+    "featuredCategoriesCount": 6,
+    "featuredProductsCount": 8,
+    "newProductsCount": 8
+  },
+
+  "features": {
+    "showPrices": true,
+    "showStock": false,
+    "enableSearch": true,
+    "enableFilters": true,
+    "enableWishlist": false
+  },
+
+  "order": {
+    "telegramMessage": "سلام، محصول {{code}} ({{name}}) را می‌خواهم."
+  },
+
+  "seo": {
+    "title": "SexKala | فروشگاه محصولات زناشویی",
+    "description": "مشاهده محصولات و ثبت سفارش از طریق تلگرام.",
+    "keywords": ["سکس شاپ", "اسباب بازی جنسی", "ویبراتور", "دیلدو", "بات پلاگ"]
+  }
+}
