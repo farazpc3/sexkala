@@ -1,10 +1,11 @@
-// app/robots.ts
-export default function robots() {
+import { MetadataRoute } from "next";
+
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/admin/", "/cart/", "/checkout/"],
+      disallow: ["/api/", "/admin/", "/dashboard/", "/cart/", "/checkout/"],
     },
     sitemap: "https://sexkala.com/sitemap.xml",
   };

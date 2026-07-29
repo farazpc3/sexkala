@@ -31,7 +31,7 @@ export default function Footer() {
           className="text-lg font-bold text-primary dark:text-inverse
  drop-shadow-lg"
         >
-          سکسکالا – sexkala.com
+          سکس کالا – sexkala.com
         </h3>
 
         {/* Description */}
