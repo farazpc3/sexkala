@@ -1,7 +1,7 @@
 // app/api/products/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { getAllProducts } from "@/lib/products";
-import { ProductFilter } from "@/lib/fitlers";
+import { ProductFilter } from "@/lib/filters";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
