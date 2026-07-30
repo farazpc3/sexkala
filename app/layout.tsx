@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import { type ReactNode } from "react";
 import { Metadata } from "next";
+import TelegramFloatingWidget from "./components/TelegramFloatingWidget";
 
 // ✅ Metadata must be in a Server Component
 export const metadata: Metadata = {
@@ -88,6 +89,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
         </main>
         <Footer />
+        <TelegramFloatingWidget />
       </body>
     </html>
   );

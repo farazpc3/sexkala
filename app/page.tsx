@@ -9,6 +9,7 @@ import { getAllCategories } from "@/lib/categories";
 import Hero from "./components/home/Hero";
 import Categories from "./components/home/Categories";
 import TelegramBanner from "./components/home/TelegramBanner";
+import TelegramJoinBanner from "./components/home/TelegramJoinBanner";
 import ProductGrid from "./components/products/ProductGrid";
 
 export default async function HomePage() {
@@ -80,6 +81,12 @@ export default async function HomePage() {
       </section>
 
       <TelegramBanner />
+
+      {/* Telegram Join Banner - Appears after 3 seconds */}
+      <TelegramJoinBanner
+        channelUsername="sexyy_toys"
+        inviteLink="https://t.me/sexyy_toys"
+      />
     </>
   );
 }
