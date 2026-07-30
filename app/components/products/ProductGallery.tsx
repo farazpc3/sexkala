@@ -18,6 +18,7 @@ export default function ProductGallery({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<ProductVideo | null>(null);
+  const [imageError, setImageError] = useState(false);
 
   const allMedia = [
     ...images.map((img) => ({ type: "image" as const, data: img })),
@@ -58,6 +59,7 @@ export default function ProductGallery({
             fill
             className="object-contain"
             sizes="(max-width: 768px) 100vw, 50vw"
+            onError={() => setImageError(true)}
           />
         ) : selectedMedia?.type === "video" ? (
           <div className="relative w-full h-full">
@@ -75,14 +77,14 @@ export default function ProductGallery({
           <>
             <button
               onClick={prevMedia}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full glass hover:bg-white/20 transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full glass hover:bg-white/20 transition-colors z-10"
               aria-label="قبلی"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
             <button
               onClick={nextMedia}
-              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full glass hover:bg-white/20 transition-colors"
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full glass hover:bg-white/20 transition-colors z-10"
               aria-label="بعدی"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -95,7 +97,7 @@ export default function ProductGallery({
           <div className="absolute inset-0 flex items-center justify-center">
             <button
               onClick={() => openVideo(selectedMedia.data as ProductVideo)}
-              className="w-16 h-16 rounded-full glass flex items-center justify-center hover:scale-110 transition-transform"
+              className="w-16 h-16 rounded-full glass flex items-center justify-center hover:scale-110 transition-transform z-10"
             >
               <Play className="w-8 h-8 text-white" />
             </button>
@@ -104,7 +106,7 @@ export default function ProductGallery({
 
         {/* Media Counter */}
         {allMedia.length > 1 && (
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 glass px-3 py-1 rounded-full text-xs">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 glass px-3 py-1 rounded-full text-xs z-10">
             {selectedIndex + 1} / {allMedia.length}
           </div>
         )}

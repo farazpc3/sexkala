@@ -5,9 +5,11 @@ import ThemeToggle from "./ThemeToggle";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import SearchBar from "../search/SearchBar";
 
 export default function Header() {
   const [isDark, setIsDark] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
@@ -29,78 +31,112 @@ export default function Header() {
         shadow-[0_0_25px_rgba(236,72,153,0.25)]
       "
     >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo + Title */}
-        <Link href="/" className="flex items-center gap-4">
-          {/* Logo container */}
-          <div
-            className="
-              w-14 h-14 rounded-2xl
-              bg-white/10 dark:bg-black/20
-              backdrop-blur-md
-              border border-white/20 dark:border-white/10
-              flex items-center justify-center
-              shadow-[0_0_20px_rgba(255,255,255,0.2)]
-              transition-all
-            "
-          >
-            <Image
-              src={isDark ? "/logo-dark.svg" : "/logo-light.svg"}
-              alt="Logo"
-              width={48}
-              height={48}
-              priority
-            />
-          </div>
-
-          {/* Title + domain */}
-          <div className="space-y-1">
-            <h1 className="text-xl md:text-2xl font-bold text-primary dark:text-inverse drop-shadow-lg">
-              سکس کالا
-            </h1>
-            <p className="text-sm text-secondary">sexkala.com</p>
-          </div>
-        </Link>
-
-        {/* Right side */}
-        <div className="flex items-center gap-4">
-          {/* Products Link */}
-          <Link
-            href="/products"
-            className="
-              px-4 py-2 rounded-full text-sm
-              glass hover:bg-white/20 transition-colors
-              text-primary dark:text-inverse
-            "
-          >
-            محصولات
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between gap-4">
+          {/* Logo + Title */}
+          <Link href="/" className="flex items-center gap-4 flex-shrink-0">
+            <div
+              className="
+                w-12 h-12 rounded-2xl
+                bg-white/10 dark:bg-black/20
+                backdrop-blur-md
+                border border-white/20 dark:border-white/10
+                flex items-center justify-center
+                shadow-[0_0_20px_rgba(255,255,255,0.2)]
+                transition-all
+              "
+            >
+              <Image
+                src={isDark ? "/logo-dark.svg" : "/logo-light.svg"}
+                alt="Logo"
+                width={40}
+                height={40}
+                priority
+              />
+            </div>
+            <div className="hidden sm:block space-y-0.5">
+              <h1 className="text-lg md:text-xl font-bold text-primary dark:text-inverse drop-shadow-lg">
+                سکس کالا
+              </h1>
+              <p className="text-xs text-secondary">sexkala.com</p>
+            </div>
           </Link>
 
-          {/* Telegram CTA */}
-          <Link
-            href="https://t.me/sexyy_toys"
-            target="_blank"
-            className="
-              flex items-center gap-2 px-4 py-2 rounded-full text-sm
-              bg-gradient-to-r from-blue-500 to-purple-600
-              text-inverse font-semibold
-              shadow-[0_0_20px_rgba(59,130,246,0.5)]
-              hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]
-              transition-all
-            "
-          >
-            <Image
-              src="/icons/telegram.svg"
-              alt="Telegram"
-              width={18}
-              height={18}
-            />
-            تلگرام فروشگاه
-          </Link>
+          {/* Search Bar - Desktop */}
+          <div className="flex-1 max-w-md hidden md:block">
+            <SearchBar placeholder="جستجو..." />
+          </div>
 
-          {/* Theme toggle */}
-          <ThemeToggle isDark={isDark} setIsDark={setIsDark} />
+          {/* Right side */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            {/* Search Button - Mobile */}
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="md:hidden p-2 rounded-full glass hover:bg-white/20 transition-colors"
+              aria-label="جستجو"
+            >
+              <svg
+                className="w-5 h-5 text-primary dark:text-inverse"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+
+            {/* Products Link */}
+            <Link
+              href="/products"
+              className="
+                px-3 py-1.5 rounded-full text-sm
+                glass hover:bg-white/20 transition-colors
+                text-primary dark:text-inverse
+                hidden sm:block
+              "
+            >
+              محصولات
+            </Link>
+
+            {/* Telegram CTA */}
+            <Link
+              href="https://t.me/sexyy_toys"
+              target="_blank"
+              className="
+                flex items-center gap-2 px-3 py-1.5 rounded-full text-sm
+                bg-gradient-to-r from-blue-500 to-purple-600
+                text-inverse font-semibold
+                shadow-[0_0_20px_rgba(59,130,246,0.5)]
+                hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]
+                transition-all
+                hidden sm:flex
+              "
+            >
+              <Image
+                src="/icons/telegram.svg"
+                alt="Telegram"
+                width={16}
+                height={16}
+              />
+              <span className="hidden lg:inline">تلگرام فروشگاه</span>
+            </Link>
+
+            {/* Theme toggle */}
+            <ThemeToggle isDark={isDark} setIsDark={setIsDark} />
+          </div>
         </div>
+
+        {/* Mobile Search Bar */}
+        {isSearchOpen && (
+          <div className="mt-3 md:hidden">
+            <SearchBar placeholder="جستجو..." />
+          </div>
+        )}
       </div>
     </header>
   );

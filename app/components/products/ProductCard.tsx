@@ -19,6 +19,7 @@ export default function ProductCard({
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [imageError, setImageError] = useState(false);
 
+  // Find the cover image, or fallback to first image, or use placeholder
   const coverImage =
     product.images?.find((img) => img.isCover) || product.images?.[0];
   const price = product.salePrice ?? product.price;
@@ -44,10 +45,11 @@ export default function ProductCard({
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
               onError={() => setImageError(true)}
+              priority={product.display?.sortOrder === 1}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center text-muted bg-gradient-to-br from-pink-100/20 to-purple-100/20 dark:from-pink-900/10 dark:to-purple-900/10">
-              <span className="text-sm">📦</span>
+              <span className="text-4xl">📦</span>
             </div>
           )}
 
@@ -126,21 +128,25 @@ export default function ProductCard({
           {/* Price */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              {hasSale ? (
-                <>
+              {price ? (
+                hasSale ? (
+                  <>
+                    <span className="text-sm font-bold text-primary">
+                      {product.salePrice?.toLocaleString()}
+                    </span>
+                    <span className="text-xs text-muted line-through">
+                      {product.price?.toLocaleString()}
+                    </span>
+                  </>
+                ) : (
                   <span className="text-sm font-bold text-primary">
-                    {product.salePrice?.toLocaleString()}
+                    {price.toLocaleString()}
                   </span>
-                  <span className="text-xs text-muted line-through">
-                    {product.price?.toLocaleString()}
-                  </span>
-                </>
+                )
               ) : (
-                <span className="text-sm font-bold text-primary">
-                  {price?.toLocaleString()}
-                </span>
+                <span className="text-sm text-muted">قیمت نامشخص</span>
               )}
-              <span className="text-xs text-muted">تومان</span>
+              {price && <span className="text-xs text-muted">تومان</span>}
             </div>
 
             {product.reactions !== undefined && product.reactions > 0 && (

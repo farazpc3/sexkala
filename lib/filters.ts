@@ -71,7 +71,7 @@ export class ProductFilter {
     let maxPrice = -Infinity;
 
     for (const product of products) {
-      // Categories
+      // Categories with proper labels
       if (product.categoryId) {
         categories.set(
           product.categoryId,
@@ -122,42 +122,149 @@ export class ProductFilter {
       }
     }
 
+    // Helper to get label for category IDs
+    const getCategoryLabel = (id: string): string => {
+      const labels: Record<string, string> = {
+        "butt-plugs": "بات پلاگ",
+        dildos: "دیلدو",
+        vibrators: "ویبراتور",
+        "penis-sleeves": "روکش آلت",
+        whips: "شلاق",
+        "cock-rings": "حلقه تاخیر",
+        bondage: "بی دی اس ام",
+        gags: "گگ",
+        "anal-beads": "آنال بال",
+        belts: "کمربند",
+      };
+      return labels[id] || id;
+    };
+
+    // Helper to get label for material IDs
+    const getMaterialLabel = (id: string): string => {
+      const labels: Record<string, string> = {
+        silicone: "سیلیکونی",
+        steel: "استیل",
+        "pu-leather": "چرم PU",
+        wood: "چوبی",
+        abs: "ABS",
+        silk: "ابریشم",
+        glass: "شیشه‌ای",
+        metal: "فلزی",
+      };
+      return labels[id] || id;
+    };
+
+    // Helper to get label for color IDs
+    const getColorLabel = (id: string): string => {
+      const labels: Record<string, string> = {
+        random: "رندوم",
+        red: "قرمز",
+        pink: "صورتی",
+        black: "مشکی",
+        "skin-tone": "رنگ پوست",
+        cream: "کرمی",
+        silver: "نقره‌ای",
+        gold: "طلایی",
+        purple: "بنفش",
+        blue: "آبی",
+        green: "سبز",
+        white: "سفید",
+        clear: "شفاف",
+      };
+      return labels[id] || id;
+    };
+
+    // Helper to get label for size IDs
+    const getSizeLabel = (id: string): string => {
+      const labels: Record<string, string> = {
+        XS: "XXS",
+        S: "کوچک",
+        M: "متوسط",
+        L: "بزرگ",
+        XL: "بزرگتر",
+        XXL: "غول",
+        adjustable: "قابل تنظیم",
+      };
+      return labels[id] || id;
+    };
+
+    // Helper to get label for badge IDs
+    const getBadgeLabel = (id: string): string => {
+      const labels: Record<string, string> = {
+        new: "جدید",
+        popular: "محبوب",
+        "best-seller": "پرفروش",
+        premium: "ویژه",
+        trending: "پرطرفدار",
+        recommended: "پیشنهادی",
+        budget: "اقتصادی",
+        compact: "جمع و جور",
+        beginner: "مناسب مبتدیان",
+        anal: "مقعدی",
+        couples: "دو نفره",
+        bdsm: "BDSM",
+        rechargeable: "شارژی",
+        powerful: "قدرتمند",
+        challenge: "چالش‌برانگیز",
+        xl: "بزرگ",
+        xxl: "غول",
+        electric: "برقی",
+        classic: "کلاسیک",
+        imported: "وارداتی",
+      };
+      return labels[id] || id;
+    };
+
     return {
-      categories: Array.from(categories.entries()).map(([id, count]) => ({
-        id,
-        label: id,
-        count,
-      })),
-      subcategories: Array.from(subcategories.entries()).map(([id, count]) => ({
-        id,
-        label: id,
-        count,
-      })),
-      materials: Array.from(materials.entries()).map(([id, count]) => ({
-        id,
-        label: id,
-        count,
-      })),
-      colors: Array.from(colors.entries()).map(([id, count]) => ({
-        id,
-        label: id,
-        count,
-      })),
-      tags: Array.from(tags.entries()).map(([id, count]) => ({
-        id,
-        label: id,
-        count,
-      })),
-      sizes: Array.from(sizes.entries()).map(([id, count]) => ({
-        id,
-        label: id,
-        count,
-      })),
-      badges: Array.from(badges.entries()).map(([id, count]) => ({
-        id,
-        label: id,
-        count,
-      })),
+      categories: Array.from(categories.entries())
+        .map(([id, count]) => ({
+          id,
+          label: getCategoryLabel(id),
+          count,
+        }))
+        .sort((a, b) => b.count - a.count),
+      subcategories: Array.from(subcategories.entries())
+        .map(([id, count]) => ({
+          id,
+          label: id,
+          count,
+        }))
+        .sort((a, b) => b.count - a.count),
+      materials: Array.from(materials.entries())
+        .map(([id, count]) => ({
+          id,
+          label: getMaterialLabel(id),
+          count,
+        }))
+        .sort((a, b) => b.count - a.count),
+      colors: Array.from(colors.entries())
+        .map(([id, count]) => ({
+          id,
+          label: getColorLabel(id),
+          count,
+        }))
+        .sort((a, b) => b.count - a.count),
+      tags: Array.from(tags.entries())
+        .map(([id, count]) => ({
+          id,
+          label: id.replace(/_/g, " "),
+          count,
+        }))
+        .sort((a, b) => b.count - a.count),
+      sizes: Array.from(sizes.entries())
+        .map(([id, count]) => ({
+          id,
+          label: getSizeLabel(id),
+          count,
+        }))
+        .sort((a, b) => b.count - a.count),
+      badges: Array.from(badges.entries())
+        .map(([id, count]) => ({
+          id,
+          label: getBadgeLabel(id),
+          count,
+        }))
+        .sort((a, b) => b.count - a.count),
       priceRange: {
         min: minPrice === Infinity ? 0 : minPrice,
         max: maxPrice === -Infinity ? 0 : maxPrice,
@@ -424,6 +531,3 @@ export function productMatchesSearch(
 
   return searchableFields.some((field) => field.toLowerCase().includes(term));
 }
-
-// Export default for easier importing
-export default ProductFilter;
