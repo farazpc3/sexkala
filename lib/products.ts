@@ -262,7 +262,17 @@ export async function getCategoryBySlug(
 
 // Helper: Get categories data from JSON (EXPORTED)
 export async function getCategoriesData(): Promise<
-  Array<{ id: string; name: { fa: string; en: string }; slug: string }>
+  Array<{
+    id: string;
+    name: { fa: string; en: string };
+    slug: string;
+    parentId?: string | null;
+    description?: string;
+    icon?: string;
+    image?: string;
+    featured?: boolean;
+    sortOrder?: number;
+  }>
 > {
   try {
     const filePath = path.join(process.cwd(), "data/categories.json");
@@ -274,42 +284,206 @@ export async function getCategoriesData(): Promise<
     console.error("Error loading categories:", error);
   }
 
-  // Fallback data
+  // Updated fallback data with all categories including Persian names
   return [
     {
-      id: "butt-plugs",
-      name: { fa: "بات پلاگ", en: "Butt Plugs" },
-      slug: "butt-plugs",
-    },
-    { id: "dildos", name: { fa: "دیلدو", en: "Dildos" }, slug: "dildos" },
-    {
       id: "vibrators",
-      name: { fa: "ویبراتور", en: "Vibrators" },
+      parentId: null,
       slug: "vibrators",
+      name: { fa: "ویبراتور", en: "Vibrators" },
+      description: "انواع ویبراتور",
+      icon: "Zap",
+      image: "/categories/vibrators.webp",
+      featured: true,
+      sortOrder: 1,
     },
     {
-      id: "penis-sleeves",
-      name: { fa: "روکش آلت", en: "Penis Sleeves" },
-      slug: "penis-sleeves",
+      id: "dildos",
+      parentId: null,
+      slug: "dildos",
+      name: { fa: "دیلدو", en: "Dildos" },
+      description: "انواع دیلدو",
+      icon: "Egg",
+      image: "/categories/dildos.webp",
+      featured: true,
+      sortOrder: 2,
     },
-    { id: "whips", name: { fa: "شلاق", en: "Whips" }, slug: "whips" },
+    {
+      id: "butt-plugs",
+      parentId: "anal-toys",
+      slug: "butt-plugs",
+      name: { fa: "بات پلاگ", en: "Butt Plugs" },
+      description: "بات پلاگ و محصولات مشابه",
+      icon: "Circle",
+      image: "/categories/butt-plugs.webp",
+      featured: true,
+      sortOrder: 3,
+    },
+    {
+      id: "anal-toys",
+      parentId: null,
+      slug: "anal-toys",
+      name: { fa: "اسباب‌بازی مقعدی", en: "Anal Toys" },
+      description: "محصولات مناسب استفاده مقعدی",
+      icon: "CircleDot",
+      image: "/categories/anal-toys.webp",
+      featured: false,
+      sortOrder: 4,
+    },
+    {
+      id: "male-toys",
+      parentId: null,
+      slug: "male-toys",
+      name: { fa: "اسباب‌بازی مردانه", en: "Male Toys" },
+      description: "محصولات مخصوص آقایان",
+      icon: "VenusAndMars",
+      image: "/categories/male-toys.webp",
+      featured: true,
+      sortOrder: 5,
+    },
+    {
+      id: "sleeves-extenders",
+      parentId: "male-toys",
+      slug: "sleeves-extenders",
+      name: { fa: "روکش و اکستندر", en: "Sleeves & Extenders" },
+      description: "روکش و افزایش‌دهنده",
+      icon: "StretchHorizontal",
+      image: "/categories/sleeves-extenders.webp",
+      featured: false,
+      sortOrder: 6,
+    },
     {
       id: "cock-rings",
-      name: { fa: "حلقه تاخیر", en: "Cock Rings" },
+      parentId: "male-toys",
       slug: "cock-rings",
+      name: { fa: "حلقه آلت", en: "Cock Rings" },
+      description: "حلقه‌های نعوظ",
+      icon: "Ring",
+      image: "/categories/cock-rings.webp",
+      featured: false,
+      sortOrder: 7,
     },
     {
-      id: "bondage",
-      name: { fa: "بی دی اس ام", en: "Bondage" },
-      slug: "bondage",
+      id: "strap-ons",
+      parentId: null,
+      slug: "strap-ons",
+      name: { fa: "استرپ‌آن", en: "Strap-ons" },
+      description: "استرپ‌آن و هارنس",
+      icon: "Link",
+      image: "/categories/strap-ons.webp",
+      featured: false,
+      sortOrder: 8,
     },
-    { id: "gags", name: { fa: "گگ", en: "Gags" }, slug: "gags" },
     {
-      id: "anal-beads",
-      name: { fa: "آنال بال", en: "Anal Beads" },
-      slug: "anal-beads",
+      id: "bdsm",
+      parentId: null,
+      slug: "bdsm",
+      name: { fa: "BDSM", en: "BDSM" },
+      description: "لوازم BDSM",
+      icon: "Shield",
+      image: "/categories/bdsm.webp",
+      featured: true,
+      sortOrder: 9,
     },
-    { id: "belts", name: { fa: "کمربند", en: "Belts" }, slug: "belts" },
+    {
+      id: "lubricants",
+      parentId: null,
+      slug: "lubricants",
+      name: { fa: "روان‌کننده", en: "Lubricants" },
+      description: "ژل و روان‌کننده",
+      icon: "Droplets",
+      image: "/categories/lubricants.webp",
+      featured: true,
+      sortOrder: 10,
+    },
+    {
+      id: "delay-products",
+      parentId: null,
+      slug: "delay-products",
+      name: { fa: "محصولات تاخیری", en: "Delay Products" },
+      description: "اسپری، ژل و کرم تاخیری",
+      icon: "Clock3",
+      image: "/categories/delay-products.webp",
+      featured: false,
+      sortOrder: 11,
+    },
+    {
+      id: "condoms",
+      parentId: null,
+      slug: "condoms",
+      name: { fa: "کاندوم", en: "Condoms" },
+      description: "انواع کاندوم",
+      icon: "ShieldCheck",
+      image: "/categories/condoms.webp",
+      featured: false,
+      sortOrder: 12,
+    },
+    {
+      id: "cleaning-products",
+      parentId: null,
+      slug: "cleaning-products",
+      name: { fa: "محصولات نظافتی", en: "Cleaning Products" },
+      description: "محصولات شستشو و ضدعفونی",
+      icon: "Sparkles",
+      image: "/categories/cleaning-products.webp",
+      featured: false,
+      sortOrder: 13,
+    },
+    {
+      id: "accessories",
+      parentId: null,
+      slug: "accessories",
+      name: { fa: "لوازم جانبی", en: "Accessories" },
+      description: "لوازم جانبی و متفرقه",
+      icon: "Package",
+      image: "/categories/accessories.webp",
+      featured: false,
+      sortOrder: 14,
+    },
+    {
+      id: "artificial-vagina",
+      parentId: "male-toys",
+      slug: "artificial-vagina",
+      name: { fa: "واژن مصنوعی", en: "Artificial Vagina" },
+      description: "واژن مصنوعی و ماستربیت",
+      icon: "Heart",
+      image: "/categories/artificial-vagina.webp",
+      featured: true,
+      sortOrder: 15,
+    },
+    {
+      id: "whips",
+      parentId: "bdsm",
+      slug: "whips",
+      name: { fa: "شلاق", en: "Whips" },
+      description: "شلاق و فلگر",
+      icon: "Hand",
+      image: "/categories/whips.webp",
+      featured: false,
+      sortOrder: 16,
+    },
+    {
+      id: "gags",
+      parentId: "bdsm",
+      slug: "gags",
+      name: { fa: "گگ", en: "Gags" },
+      description: "گگ و دهان‌بند",
+      icon: "Mic",
+      image: "/categories/gags.webp",
+      featured: false,
+      sortOrder: 17,
+    },
+    {
+      id: "belts",
+      parentId: "strap-ons",
+      slug: "belts",
+      name: { fa: "کمربند", en: "Belts" },
+      description: "کمربند و هارنس",
+      icon: "Belt",
+      image: "/categories/belts.webp",
+      featured: false,
+      sortOrder: 18,
+    },
   ];
 }
 
@@ -344,6 +518,12 @@ export async function getSubcategoriesData(): Promise<
       id: "steel",
       name: { fa: "استیل", en: "Steel" },
       slug: "steel",
+      categoryId: "butt-plugs",
+    },
+    {
+      id: "glass",
+      name: { fa: "شیشه‌ای", en: "Glass" },
+      slug: "glass",
       categoryId: "butt-plugs",
     },
     {
@@ -404,7 +584,19 @@ export async function getSubcategoriesData(): Promise<
       id: "sets",
       name: { fa: "ست", en: "Sets" },
       slug: "sets",
-      categoryId: "bondage",
+      categoryId: "bdsm",
+    },
+    {
+      id: "realistic",
+      name: { fa: "واقع‌گرا", en: "Realistic" },
+      slug: "realistic",
+      categoryId: "artificial-vagina",
+    },
+    {
+      id: "silicone-vagina",
+      name: { fa: "سیلیکونی", en: "Silicone" },
+      slug: "silicone-vagina",
+      categoryId: "artificial-vagina",
     },
   ];
 }
@@ -494,4 +686,11 @@ export function getPriceRange(products: Product[]): {
 export function clearProductsCache(): void {
   productsCache = null;
   productsCacheTime = 0;
+}
+export function getMappedCategoryId(categoryId: string): string {
+  const map: Record<string, string> = {
+    "penis-sleeves": "sleeves-extenders",
+    bondage: "bdsm",
+  };
+  return map[categoryId] || categoryId;
 }

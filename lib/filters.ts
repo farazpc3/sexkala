@@ -71,7 +71,7 @@ export class ProductFilter {
     let maxPrice = -Infinity;
 
     for (const product of products) {
-      // Categories with proper labels
+      // Categories
       if (product.categoryId) {
         categories.set(
           product.categoryId,
@@ -125,16 +125,32 @@ export class ProductFilter {
     // Helper to get label for category IDs
     const getCategoryLabel = (id: string): string => {
       const labels: Record<string, string> = {
-        "butt-plugs": "بات پلاگ",
-        dildos: "دیلدو",
+        // Main categories
         vibrators: "ویبراتور",
-        "penis-sleeves": "روکش آلت",
+        dildos: "دیلدو",
+        "anal-toys": "اسباب‌بازی مقعدی",
+        "male-toys": "اسباب‌بازی مردانه",
+        "strap-ons": "استرپ‌آن",
+        bdsm: "BDSM",
+        lubricants: "روان‌کننده",
+        "delay-products": "محصولات تاخیری",
+        condoms: "کاندوم",
+        "cleaning-products": "محصولات نظافتی",
+        accessories: "لوازم جانبی",
+
+        // Subcategories
+        "butt-plugs": "بات پلاگ",
+        "sleeves-extenders": "روکش و اکستندر",
+        "cock-rings": "حلقه آلت",
+        "artificial-vagina": "واژن مصنوعی",
         whips: "شلاق",
-        "cock-rings": "حلقه تاخیر",
-        bondage: "بی دی اس ام",
         gags: "گگ",
-        "anal-beads": "آنال بال",
         belts: "کمربند",
+
+        // Legacy (keep for backward compatibility)
+        "penis-sleeves": "روکش آلت",
+        bondage: "بی دی اس ام",
+        "anal-beads": "آنال بال",
       };
       return labels[id] || id;
     };
@@ -150,6 +166,10 @@ export class ProductFilter {
         silk: "ابریشم",
         glass: "شیشه‌ای",
         metal: "فلزی",
+        tpe: "TPE",
+        cyberskin: "سایبراسکین",
+        latex: "لاتکس",
+        rubber: "لاستیک",
       };
       return labels[id] || id;
     };
@@ -170,6 +190,8 @@ export class ProductFilter {
         green: "سبز",
         white: "سفید",
         clear: "شفاف",
+        rainbow: "رنگین‌کمان",
+        "multi-color": "چند رنگ",
       };
       return labels[id] || id;
     };
@@ -184,6 +206,7 @@ export class ProductFilter {
         XL: "بزرگتر",
         XXL: "غول",
         adjustable: "قابل تنظیم",
+        "one-size": "یک سایز",
       };
       return labels[id] || id;
     };
@@ -211,6 +234,8 @@ export class ProductFilter {
         electric: "برقی",
         classic: "کلاسیک",
         imported: "وارداتی",
+        "on-sale": "تخفیف",
+        limited: "محدود",
       };
       return labels[id] || id;
     };
@@ -226,7 +251,7 @@ export class ProductFilter {
       subcategories: Array.from(subcategories.entries())
         .map(([id, count]) => ({
           id,
-          label: id,
+          label: id.replace(/_/g, " "),
           count,
         }))
         .sort((a, b) => b.count - a.count),
@@ -531,3 +556,6 @@ export function productMatchesSearch(
 
   return searchableFields.some((field) => field.toLowerCase().includes(term));
 }
+
+// Export default for easier importing
+export default ProductFilter;

@@ -1,31 +1,48 @@
+// app/components/home/Categories.tsx
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
-// This will be passed from the parent page with real category data
-interface CategoriesProps {
-  categories?: Array<{
-    id: string;
-    name: {
-      fa: string;
-      en: string;
-    };
-    slug: string;
-    count: number;
-    icon?: string;
-  }>;
+interface Category {
+  id: string;
+  name: {
+    fa: string;
+    en: string;
+  };
+  slug: string;
+  count: number;
+  icon?: string;
+  image?: string;
 }
 
-export default function Categories({ categories = [] }: CategoriesProps) {
+interface CategoriesProps {
+  categories?: Category[];
+  productImages?: Record<string, string[]>;
+}
+
+export default function Categories({
+  categories = [],
+  productImages = {},
+}: CategoriesProps) {
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+
+  // Debug: log what categories we have
+  console.log(
+    "📂 Categories received:",
+    categories.map((c) => ({ id: c.id, slug: c.slug, name: c.name.fa })),
+  );
+
   // If no categories passed, show placeholder
   const displayCategories =
     categories.length > 0
       ? categories
       : [
           {
-            id: "butt-plugs",
-            name: { fa: "بات پلاگ", en: "Butt Plugs" },
-            slug: "butt-plugs",
+            id: "vibrators",
+            name: { fa: "ویبراتور", en: "Vibrators" },
+            slug: "vibrators",
             count: 0,
           },
           {
@@ -35,18 +52,59 @@ export default function Categories({ categories = [] }: CategoriesProps) {
             count: 0,
           },
           {
-            id: "vibrators",
-            name: { fa: "ویبراتور", en: "Vibrators" },
-            slug: "vibrators",
+            id: "butt-plugs",
+            name: { fa: "بات پلاگ", en: "Butt Plugs" },
+            slug: "butt-plugs",
             count: 0,
           },
           {
-            id: "penis-sleeves",
-            name: { fa: "روکش آلت", en: "Penis Sleeves" },
-            slug: "penis-sleeves",
+            id: "male-toys",
+            name: { fa: "اسباب‌بازی مردانه", en: "Male Toys" },
+            slug: "male-toys",
             count: 0,
           },
         ];
+
+  // Filter out categories with 0 products (optional - remove this if you want to show all categories)
+  const filteredCategories = displayCategories.filter((cat) => cat.count > 0);
+
+  // If no categories with products, use all categories
+  const finalCategories =
+    filteredCategories.length > 0 ? filteredCategories : displayCategories;
+
+  const getCategoryImage = (categoryId: string): string | null => {
+    const images = productImages[categoryId];
+    if (images && images.length > 0) {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      return images[randomIndex];
+    }
+    return null;
+  };
+
+  const handleImageError = (categoryId: string) => {
+    setImageErrors((prev) => ({ ...prev, [categoryId]: true }));
+  };
+
+  const categoryIcons: Record<string, string> = {
+    vibrators: "⚡",
+    dildos: "🍆",
+    "butt-plugs": "🔌",
+    "anal-toys": "🔵",
+    "male-toys": "👤",
+    "sleeves-extenders": "🧤",
+    "cock-rings": "⭕",
+    "strap-ons": "🔗",
+    bdsm: "⛓️",
+    lubricants: "💧",
+    "delay-products": "⏱️",
+    condoms: "🛡️",
+    "cleaning-products": "🧹",
+    accessories: "📦",
+    "artificial-vagina": "🌸",
+    whips: "鞭",
+    gags: "🔇",
+    belts: "🎀",
+  };
 
   return (
     <section id="categories" className="relative mb-16">
@@ -67,43 +125,56 @@ export default function Categories({ categories = [] }: CategoriesProps) {
 
       {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {displayCategories.map((cat) => (
-          <Link
-            key={cat.id}
-            href={`/categories/${cat.slug}`}
-            className="
-              glass rounded-2xl p-6 text-center shadow-xl
-              border border-white/20 dark:border-white/10
-              backdrop-blur-xl transition-all
-              hover:scale-[1.05] hover:-translate-y-1
-              hover:shadow-[0_0_35px_rgba(236,72,153,0.5)]
-              duration-300 ease-out
-            "
-          >
-            {/* Icon placeholder - you can replace with actual icons */}
-            <div
+        {finalCategories.map((cat) => {
+          const image = getCategoryImage(cat.id);
+          const hasError = imageErrors[cat.id];
+
+          return (
+            <Link
+              key={cat.id}
+              href={`/categories/${cat.slug}`}
               className="
-              h-24 rounded-xl 
-              bg-white/10 dark:bg-black/20 
-              border border-white/20 dark:border-white/10 
-              backdrop-blur-md 
-              flex items-center justify-center 
-              text-4xl
-              mb-4
-            "
+                glass rounded-2xl overflow-hidden text-center shadow-xl
+                border border-white/20 dark:border-white/10
+                backdrop-blur-xl transition-all
+                hover:scale-[1.05] hover:-translate-y-1
+                hover:shadow-[0_0_35px_rgba(236,72,153,0.5)]
+                duration-300 ease-out group
+              "
             >
-              {cat.icon || "📦"}
-            </div>
+              {/* Image Container */}
+              <div className="relative h-32 md:h-40 overflow-hidden bg-gradient-to-br from-pink-100/20 to-purple-100/20 dark:from-pink-900/10 dark:to-purple-900/10">
+                {image && !hasError ? (
+                  <Image
+                    src={image}
+                    alt={cat.name.fa}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    onError={() => handleImageError(cat.id)}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-5xl">
+                    {cat.icon || categoryIcons[cat.id] || "📦"}
+                  </div>
+                )}
 
-            {/* Title */}
-            <h3 className="text-lg font-semibold text-primary dark:text-inverse drop-shadow-md">
-              {cat.name.fa}
-            </h3>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-            {/* Count */}
-            <p className="text-sm text-muted mt-1">{cat.count} محصول</p>
-          </Link>
-        ))}
+                {/* Category name on image */}
+                <div className="absolute bottom-3 left-3 right-3">
+                  <h3 className="text-sm md:text-base font-bold text-white drop-shadow-lg text-right">
+                    {cat.name.fa}
+                  </h3>
+                  <p className="text-xs text-white/80 text-right">
+                    {cat.count} محصول
+                  </p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       {/* View All Categories */}

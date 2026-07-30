@@ -7,7 +7,7 @@ import { FilterState } from "@/types/product";
 import { Suspense } from "react";
 
 interface ProductsPageProps {
-  searchParams: {
+  searchParams: Promise<{
     q?: string;
     category?: string;
     categories?: string;
@@ -20,12 +20,15 @@ interface ProductsPageProps {
     maxPrice?: string;
     sort?: string;
     page?: string;
-  };
+  }>;
 }
 
 export default async function ProductsPage({
   searchParams,
 }: ProductsPageProps) {
+  // ✅ Must await searchParams before accessing its properties
+  const params = await searchParams;
+
   const allProducts = await getAllProducts();
   const filter = new ProductFilter(allProducts);
 
@@ -33,53 +36,53 @@ export default async function ProductsPage({
   const filterState: Partial<FilterState> = {};
 
   // Search
-  if (searchParams.q) {
-    filterState.search = searchParams.q;
+  if (params.q) {
+    filterState.search = params.q;
   }
 
   // Categories (supports both single and multiple)
-  if (searchParams.categories) {
-    filterState.categories = searchParams.categories.split(",");
-  } else if (searchParams.category) {
-    filterState.categories = [searchParams.category];
+  if (params.categories) {
+    filterState.categories = params.categories.split(",");
+  } else if (params.category) {
+    filterState.categories = [params.category];
   }
 
   // Materials
-  if (searchParams.materials) {
-    filterState.materials = searchParams.materials.split(",");
+  if (params.materials) {
+    filterState.materials = params.materials.split(",");
   }
 
   // Colors
-  if (searchParams.colors) {
-    filterState.colors = searchParams.colors.split(",");
+  if (params.colors) {
+    filterState.colors = params.colors.split(",");
   }
 
   // Sizes
-  if (searchParams.sizes) {
-    filterState.sizes = searchParams.sizes.split(",");
+  if (params.sizes) {
+    filterState.sizes = params.sizes.split(",");
   }
 
   // Badges
-  if (searchParams.badges) {
-    filterState.badges = searchParams.badges.split(",");
+  if (params.badges) {
+    filterState.badges = params.badges.split(",");
   }
 
   // Tags
-  if (searchParams.tags) {
-    filterState.tags = searchParams.tags.split(",");
+  if (params.tags) {
+    filterState.tags = params.tags.split(",");
   }
 
   // Price range
-  if (searchParams.minPrice || searchParams.maxPrice) {
+  if (params.minPrice || params.maxPrice) {
     filterState.priceRange = {
-      min: searchParams.minPrice ? parseInt(searchParams.minPrice) : null,
-      max: searchParams.maxPrice ? parseInt(searchParams.maxPrice) : null,
+      min: params.minPrice ? parseInt(params.minPrice) : null,
+      max: params.maxPrice ? parseInt(params.maxPrice) : null,
     };
   }
 
   // Sort
-  if (searchParams.sort) {
-    filterState.sortBy = searchParams.sort as FilterState["sortBy"];
+  if (params.sort) {
+    filterState.sortBy = params.sort as FilterState["sortBy"];
   }
 
   filter.setFilters(filterState);

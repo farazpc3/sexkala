@@ -11,6 +11,7 @@ import Categories from "./components/home/Categories";
 import TelegramBanner from "./components/home/TelegramBanner";
 import TelegramJoinBanner from "./components/home/TelegramJoinBanner";
 import ProductGrid from "./components/products/ProductGrid";
+import { Product } from "@/types/product";
 
 export default async function HomePage() {
   const allProducts = await getAllProducts();
@@ -18,10 +19,30 @@ export default async function HomePage() {
   const newProducts = getNewProducts(allProducts);
   const categories = await getAllCategories();
 
+  // Group product images by category
+  const productImagesByCategory: Record<string, string[]> = {};
+
+  for (const product of allProducts) {
+    const categoryId = product.categoryId;
+    if (!productImagesByCategory[categoryId]) {
+      productImagesByCategory[categoryId] = [];
+    }
+
+    // Get cover image or first image
+    const coverImage =
+      product.images?.find((img) => img.isCover) || product.images?.[0];
+    if (coverImage) {
+      productImagesByCategory[categoryId].push(coverImage.src);
+    }
+  }
+
   return (
     <>
       <Hero />
-      <Categories categories={categories} />
+      <Categories
+        categories={categories}
+        productImages={productImagesByCategory}
+      />
 
       {/* New Products Section */}
       <section className="mt-12">

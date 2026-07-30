@@ -39,13 +39,17 @@ export default function FilterSidebar({
     }));
   };
 
+  // Get current URL params as a string
+  const getParamsString = (): string => {
+    return searchParams?.toString() || "";
+  };
+
   // Build URL with filters
   const buildFilterUrl = (key: string, value: string): string => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() || "");
 
     // Handle different filter types
     if (key === "price") {
-      // Price filter is handled differently
       return `/products?${params.toString()}`;
     }
 
@@ -66,7 +70,7 @@ export default function FilterSidebar({
   };
 
   const isFilterActive = (key: string, value: string): boolean => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() || "");
     const values = params.get(key)?.split(",") || [];
     return values.includes(value);
   };
@@ -75,8 +79,8 @@ export default function FilterSidebar({
     router.push("/products");
   };
 
-  const hasActiveFilters = () => {
-    const params = new URLSearchParams(searchParams.toString());
+  const hasActiveFilters = (): boolean => {
+    const params = new URLSearchParams(searchParams?.toString() || "");
     const filterKeys = [
       "categories",
       "materials",
@@ -95,7 +99,7 @@ export default function FilterSidebar({
 
   const getActiveFilterCount = (): number => {
     let count = 0;
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(searchParams?.toString() || "");
     const filterKeys = [
       "categories",
       "materials",
@@ -110,6 +114,32 @@ export default function FilterSidebar({
     }
     if (params.get("minPrice") || params.get("maxPrice")) count++;
     return count;
+  };
+
+  // Get display label for filter values
+  const getDisplayLabel = (key: string, id: string): string => {
+    // For categories, use the category name from the options
+    if (key === "categories") {
+      const option = filterOptions.categories.find((c) => c.id === id);
+      return option?.label || id;
+    }
+    if (key === "materials") {
+      const option = filterOptions.materials.find((c) => c.id === id);
+      return option?.label || id;
+    }
+    if (key === "colors") {
+      const option = filterOptions.colors.find((c) => c.id === id);
+      return option?.label || id;
+    }
+    if (key === "sizes") {
+      const option = filterOptions.sizes.find((c) => c.id === id);
+      return option?.label || id;
+    }
+    if (key === "badges") {
+      const option = filterOptions.badges.find((c) => c.id === id);
+      return option?.label || id;
+    }
+    return id;
   };
 
   const renderFilterSection = (
@@ -336,7 +366,7 @@ export default function FilterSidebar({
                       className="w-full mt-1 px-3 py-1.5 text-sm rounded-lg glass bg-transparent outline-none border border-white/10 focus:border-primary transition-colors"
                       onChange={(e) => {
                         const params = new URLSearchParams(
-                          searchParams.toString(),
+                          searchParams?.toString() || "",
                         );
                         if (e.target.value) {
                           params.set("minPrice", e.target.value);
@@ -345,7 +375,7 @@ export default function FilterSidebar({
                         }
                         router.push(`/products?${params.toString()}`);
                       }}
-                      defaultValue={searchParams.get("minPrice") || ""}
+                      defaultValue={searchParams?.get("minPrice") || ""}
                     />
                   </div>
                   <span className="text-muted text-sm">تا</span>
@@ -357,7 +387,7 @@ export default function FilterSidebar({
                       className="w-full mt-1 px-3 py-1.5 text-sm rounded-lg glass bg-transparent outline-none border border-white/10 focus:border-primary transition-colors"
                       onChange={(e) => {
                         const params = new URLSearchParams(
-                          searchParams.toString(),
+                          searchParams?.toString() || "",
                         );
                         if (e.target.value) {
                           params.set("maxPrice", e.target.value);
@@ -366,7 +396,7 @@ export default function FilterSidebar({
                         }
                         router.push(`/products?${params.toString()}`);
                       }}
-                      defaultValue={searchParams.get("maxPrice") || ""}
+                      defaultValue={searchParams?.get("maxPrice") || ""}
                     />
                   </div>
                 </div>

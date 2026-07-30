@@ -183,7 +183,7 @@ export default function Hero() {
           </p>
 
           <p className="text-secondary text-sm font-semibold">
-            پرداخت درب منزل — پرداخت کارت به کارت یعنی کلا برداری
+            پرداخت درب منزل تهران ، حومه و کرج
           </p>
 
           <Link

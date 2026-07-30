@@ -116,7 +116,7 @@
     "parentId": null,
     "slug": "bdsm",
     "name": {
-      "fa": "BDSM",
+      "fa": "بی دی اس ام",
       "en": "BDSM"
     },
     "description": "لوازم BDSM",
@@ -194,5 +194,61 @@
     "image": "/categories/accessories.webp",
     "featured": false,
     "sortOrder": 14
+  },
+  {
+    "id": "artificial-vagina",
+    "parentId": "male-toys",
+    "slug": "artificial-vagina",
+    "name": {
+      "fa": "واژن مصنوعی",
+      "en": "Artificial Vagina"
+    },
+    "description": "واژن مصنوعی و ماستربیت",
+    "icon": "Heart",
+    "image": "/categories/artificial-vagina.webp",
+    "featured": true,
+    "sortOrder": 15
+  },
+  {
+    "id": "whips",
+    "parentId": "bdsm",
+    "slug": "whips",
+    "name": {
+      "fa": "شلاق",
+      "en": "Whips"
+    },
+    "description": "شلاق و فلگر",
+    "icon": "Hand",
+    "image": "/categories/whips.webp",
+    "featured": false,
+    "sortOrder": 16
+  },
+  {
+    "id": "gags",
+    "parentId": "bdsm",
+    "slug": "gags",
+    "name": {
+      "fa": "گگ",
+      "en": "Gags"
+    },
+    "description": "گگ و دهان‌بند",
+    "icon": "Mic",
+    "image": "/categories/gags.webp",
+    "featured": false,
+    "sortOrder": 17
+  },
+  {
+    "id": "belts",
+    "parentId": "strap-ons",
+    "slug": "belts",
+    "name": {
+      "fa": "کمربند",
+      "en": "Belts"
+    },
+    "description": "کمربند و هارنس",
+    "icon": "Belt",
+    "image": "/categories/belts.webp",
+    "featured": false,
+    "sortOrder": 18
   }
 ]
