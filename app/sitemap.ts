@@ -6,7 +6,7 @@ export default async function sitemap() {
   const products = await getAllProducts();
   const categories = await getAllCategories();
 
-  const baseUrl = "https://sexkala.com";
+  const baseUrl = "https://www.lovilla.shop";
 
   const productUrls = products.map((product) => ({
     url: `${baseUrl}/products/${product.slug}`,

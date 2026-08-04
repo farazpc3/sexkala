@@ -1,4 +1,4 @@
-// app/components/layout/Header.tsx (Alternative with breadcrumb)
+// app/components/layout/Header.tsx
 "use client";
 
 import ThemeToggle from "./ThemeToggle";
@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import SearchBar from "../search/SearchBar";
-import { ChevronLeft } from "lucide-react";
 
 export default function Header() {
   const [isDark, setIsDark] = useState(false);
@@ -25,36 +24,9 @@ export default function Header() {
     document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
 
-  // Get navigation items based on current route
-  const getNavItems = () => {
-    if (pathname === "/") {
-      return [{ label: "محصولات", href: "/products" }];
-    }
-    if (pathname?.startsWith("/products")) {
-      // Check if it's a product detail page
-      const isDetailPage = pathname !== "/products";
-      return [
-        { label: "خانه", href: "/" },
-        ...(isDetailPage ? [{ label: "محصولات", href: "/products" }] : []),
-      ];
-    }
-    if (pathname?.startsWith("/search")) {
-      return [
-        { label: "خانه", href: "/" },
-        { label: "محصولات", href: "/products" },
-        { label: "جستجو", href: "/search" },
-      ];
-    }
-    if (pathname?.startsWith("/categories")) {
-      return [
-        { label: "خانه", href: "/" },
-        { label: "محصولات", href: "/products" },
-      ];
-    }
-    return [{ label: "محصولات", href: "/products" }];
-  };
-
-  const navItems = getNavItems();
+  const isProductsPage =
+    pathname?.startsWith("/products") || pathname?.startsWith("/search");
+  const isHomePage = pathname === "/";
 
   return (
     <header
@@ -67,7 +39,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-4">
-          {/* Logo */}
+          {/* Logo + Title */}
           <Link href="/" className="flex items-center gap-4 flex-shrink-0">
             <div
               className="
@@ -82,7 +54,7 @@ export default function Header() {
             >
               <Image
                 src={isDark ? "/logo-dark.svg" : "/logo-light.svg"}
-                alt="Logo"
+                alt="لاویلا"
                 width={40}
                 height={40}
                 priority
@@ -90,35 +62,11 @@ export default function Header() {
             </div>
             <div className="hidden sm:block space-y-0.5">
               <h1 className="text-lg md:text-xl font-bold text-primary dark:text-inverse drop-shadow-lg">
-                سکس کالا
+                لاویلا
               </h1>
-              <p className="text-xs text-secondary">sexkala.com</p>
+              <p className="text-xs text-secondary">lovilla.shop</p>
             </div>
           </Link>
-
-          {/* Breadcrumb Navigation */}
-          <div className="hidden md:flex items-center gap-2 text-sm">
-            {navItems.map((item, index) => (
-              <span key={item.href} className="flex items-center gap-2">
-                <Link
-                  href={item.href}
-                  className={`
-                    transition-colors hover:text-primary
-                    ${
-                      index === navItems.length - 1
-                        ? "text-primary font-medium"
-                        : "text-muted"
-                    }
-                  `}
-                >
-                  {item.label}
-                </Link>
-                {index < navItems.length - 1 && (
-                  <ChevronLeft className="w-4 h-4 text-muted" />
-                )}
-              </span>
-            ))}
-          </div>
 
           {/* Search Bar - Desktop */}
           <div className="flex-1 max-w-md hidden md:block">
@@ -148,12 +96,21 @@ export default function Header() {
               </svg>
             </button>
 
-            {/* Products / Home Link - Mobile */}
+            {/* Products / Home Link */}
             <Link
-              href={pathname === "/" ? "/products" : "/"}
-              className="sm:hidden px-3 py-1.5 rounded-full text-sm glass hover:bg-white/20 transition-colors text-primary dark:text-inverse"
+              href={isProductsPage ? "/" : "/products"}
+              className={`
+                px-3 py-1.5 rounded-full text-sm
+                transition-all duration-200
+                ${
+                  isProductsPage
+                    ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-[0_0_20px_rgba(236,72,153,0.3)]"
+                    : "glass hover:bg-white/20 text-primary dark:text-inverse"
+                }
+                hidden sm:block
+              `}
             >
-              {pathname === "/" ? "محصولات" : "خانه"}
+              {isProductsPage ? "خانه" : "محصولات"}
             </Link>
 
             {/* Telegram CTA */}

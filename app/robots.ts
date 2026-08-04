@@ -1,3 +1,4 @@
+// app/robots.ts
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/", "/dashboard/", "/cart/", "/checkout/"],
     },
-    sitemap: "https://sexkala.com/sitemap.xml",
+    sitemap: "https://www.lovilla.shop/sitemap.xml",
   };
 }

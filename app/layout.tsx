@@ -4,19 +4,18 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import { type ReactNode } from "react";
 import { Metadata } from "next";
-import TelegramFloatingWidget from "./components/TelegramFloatingWidget";
 
-// ✅ Metadata must be in a Server Component
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sexkala.com"),
+  metadataBase: new URL("https://www.lovilla.shop"),
   title: {
-    template: "%s | سکس کالا - فروشگاه تخصصی محصولات جنسی",
-    default: "سکس کالا | فروشگاه تخصصی محصولات جنسی با ارسال محرمانه",
+    template: "%s | لاویلا - فروشگاه تخصصی محصولات جنسی",
+    default: "لاویلا | فروشگاه تخصصی محصولات جنسی با ارسال محرمانه",
   },
   description:
-    "فروشگاه اینترنتی سکس کالا | خرید انواع دیلدو، ویبراتور، بات پلاگ و محصولات جنسی با کیفیت بالا. ارسال محرمانه و پرداخت درب منزل.",
+    "فروشگاه اینترنتی لاویلا | خرید انواع دیلدو، ویبراتور، بات پلاگ و محصولات جنسی با کیفیت بالا. ارسال محرمانه و پرداخت درب منزل.",
   keywords: [
-    "سکس کالا",
+    "لاویلا",
+    "Lovilla",
     "خرید محصولات جنسی",
     "دیلدو",
     "ویبراتور",
@@ -25,20 +24,20 @@ export const metadata: Metadata = {
     "فروشگاه جنسی",
     "محصولات بزرگسالان",
   ],
-  authors: [{ name: "سکس کالا" }],
-  creator: "سکس کالا",
-  publisher: "سکس کالا",
+  authors: [{ name: "لاویلا" }],
+  creator: "لاویلا",
+  publisher: "لاویلا",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "سکس کالا | فروشگاه تخصصی محصولات جنسی",
+    title: "لاویلا | فروشگاه تخصصی محصولات جنسی",
     description:
       "خرید انواع دیلدو، ویبراتور، بات پلاگ و محصولات جنسی با کیفیت بالا. ارسال محرمانه و پرداخت درب منزل.",
-    url: "https://sexkala.com",
-    siteName: "سکس کالا",
+    url: "https://www.lovilla.shop",
+    siteName: "لاویلا",
     locale: "fa_IR",
     type: "website",
     images: [
@@ -46,13 +45,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "سکس کالا - فروشگاه تخصصی محصولات جنسی",
+        alt: "لاویلا - فروشگاه تخصصی محصولات جنسی",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "سکس کالا | فروشگاه تخصصی محصولات جنسی",
+    title: "لاویلا | فروشگاه تخصصی محصولات جنسی",
     description:
       "خرید انواع دیلدو، ویبراتور، بات پلاگ و محصولات جنسی با کیفیت بالا.",
     images: ["/og-image.jpg"],
@@ -69,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sexkala.com",
+    canonical: "https://www.lovilla.shop",
   },
 };
 
@@ -89,7 +88,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
         </main>
         <Footer />
-        <TelegramFloatingWidget />
       </body>
     </html>
   );
